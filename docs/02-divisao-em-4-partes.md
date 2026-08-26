@@ -36,7 +36,7 @@ Ninguém depende de ninguém para começar. Cada pessoa tem sua área e toca ela
 
 # Parte 1 — Acesso e Permissão
 
-**Responsável:** Marcos Vinicio Territo
+**Responsável:** Flavia
 
 ### Telas
 `/auth` (login, cadastro, esqueci minha senha, entrar com Google, entrar com Apple) ·
@@ -146,7 +146,7 @@ Isso não é bug, é a regra dos 5 exercícios funcionando.
 
 # Parte 4 — Conteúdo com IA
 
-**Responsável:** Flavia
+**Responsável:** Marcos Vinicio Territo
 
 ### Telas
 `/stories` (Historinhas) · `/interview` (Entrevistas) · `/chatbot` (Falar com Max) ·

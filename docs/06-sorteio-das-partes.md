@@ -8,14 +8,38 @@ mesmo tempo.
 
 ---
 
-## Resultado
+## Distribuição atual
 
 | Parte | Responsável |
 |---|---|
-| **Parte 1 — Acesso e Permissão** | Marcos Vinicio Territo |
+| **Parte 1 — Acesso e Permissão** | Flavia |
 | **Parte 2 — Prática Estruturada** | João Paulo |
 | **Parte 3 — Pontuação e Comparação** | Denaide de Cassia Sónora Souza Costa |
-| **Parte 4 — Conteúdo com IA** | Flavia |
+| **Parte 4 — Conteúdo com IA** | Marcos Vinicio Territo |
+
+### Troca registrada — 26/08/2026
+
+**Marcos e Flavia trocaram**: Marcos saiu da Parte 1 e assumiu a Parte 4; Flavia fez o
+caminho inverso.
+
+**Motivo:** a Parte 4 é a mais complexa do projeto — cinco telas, conteúdo que muda a cada
+execução e duas telas que dependem de microfone. Marcos é quem tem mais experiência com
+automação no grupo, então faz sentido que a parte mais técnica fique com ele. A Parte 1, em
+troca, é a mais previsível: mesma entrada, mesma saída, sempre.
+
+O resultado original do sorteio está preservado abaixo. Trocas se registram, não se apagam —
+senão ninguém consegue mais conferir que o sorteio foi honesto.
+
+---
+
+## Resultado original do sorteio
+
+| Parte | Sorteado para |
+|---|---|
+| Parte 1 — Acesso e Permissão | Marcos Vinicio Territo |
+| Parte 2 — Prática Estruturada | João Paulo |
+| Parte 3 — Pontuação e Comparação | Denaide de Cassia Sónora Souza Costa |
+| Parte 4 — Conteúdo com IA | Flavia |
 
 ---
 
@@ -71,10 +95,11 @@ O que não vale é trocar sem registrar. Aí ninguém sabe mais quem responde pe
 
 ## Um recado para quem tirou cada parte
 
-**Parte 1 — Acesso e Permissão.** Você tirou a parte de que o grupo inteiro depende: ninguém
-testa nada sem conseguir entrar e ativar o premium. Comece por ela e avise no grupo assim que
-conseguir confirmar que a ativação funciona. Em compensação, é a parte mais previsível do
-projeto — mesma entrada, mesma saída, sempre. É a mais fácil de automatizar.
+**Parte 1 — Acesso e Permissão.** É a parte mais previsível do projeto: mesma entrada, mesma
+saída, sempre. Nenhuma inteligência artificial, nenhum áudio — só formulário, validação e
+permissão. É a melhor parte para aprender a escrever cenário, porque o resultado esperado
+nunca é discutível. O cenário mais importante que é seu: conferir que quem **não** tem premium
+não consegue abrir as telas premium digitando o endereço direto na barra do navegador.
 
 **Parte 2 — Prática Estruturada.** A sua pergunta ao sistema é sempre a mesma: *"você lembra do
 que eu fiz?"*. Quase todo cenário seu vai ter um "sai e volta". Se você testar só o que
@@ -86,8 +111,10 @@ trabalho é conferir se elas concordam entre si. Anote no papel quantas questõe
 antes de abrir as telas: esse número anotado é o seu resultado esperado. Você vai precisar
 responder 5 exercícios antes de conseguir testar o ranking.
 
-**Parte 4 — Conteúdo com IA.** Você tirou a parte com mais telas e a mais estranha de testar:
-a resposta muda toda vez. Leia com atenção a "regra de ouro" no README da sua pasta antes de
-escrever o primeiro cenário — ela evita que você escreva testes que acusam defeito onde não
-há. Duas das suas telas usam microfone; quando chegar nelas, peça ajuda, já está previsto que
-essa parte precisa de apoio técnico.
+**Parte 4 — Conteúdo com IA.** É a parte mais complexa do projeto, e foi para ela por isso.
+Cinco telas, e a resposta muda toda vez — o que quebra a forma normal de testar. A "regra de
+ouro" no README da pasta é o que impede o grupo de escrever testes que acusam defeito onde
+não há: não se verifica o conteúdo que a IA gerou, verifica-se o comportamento em volta dele.
+Duas telas dependem de microfone, o ponto mais técnico do projeto inteiro. Como esta parte
+também define o padrão de como o grupo vai tratar não-determinismo, vale escrever o primeiro
+`.feature` dela cedo e mostrar aos outros como exemplo.
