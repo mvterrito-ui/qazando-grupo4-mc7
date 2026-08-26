@@ -14,6 +14,10 @@ habilidades diferentes. Se cada pessoa pular de assunto o tempo todo, ninguém a
 direito. Agrupando por semelhança, **o que você aprender na primeira tela da sua parte serve
 nas outras** — você vira especialista naquele tipo de problema.
 
+As partes foram distribuídas por **sorteio aleatório e verificável** — ninguém escolheu e
+ninguém foi escalado. O resultado, o método e o comando para conferir estão em
+[06-sorteio-das-partes.md](06-sorteio-das-partes.md).
+
 ## O que significa "ser dono de uma parte"
 
 Quem pega uma parte faz ela **do começo ao fim**, sozinho:
@@ -32,7 +36,7 @@ Ninguém depende de ninguém para começar. Cada pessoa tem sua área e toca ela
 
 # Parte 1 — Acesso e Permissão
 
-**Responsável:** _(a definir)_
+**Responsável:** Marcos Vinicio Territo
 
 ### Telas
 `/auth` (login, cadastro, esqueci minha senha, entrar com Google, entrar com Apple) ·
@@ -66,7 +70,7 @@ mesma saída, sempre. É a parte mais fácil de automatizar e a melhor para quem
 
 # Parte 2 — Prática Estruturada
 
-**Responsável:** _(a definir)_
+**Responsável:** João Paulo
 
 ### Telas
 `/duolingo` (Trilha do Inglês) · `/exercises` (Exercícios) · `/flashcards` (Flashcards QA)
@@ -102,7 +106,7 @@ na fila dos flashcards. Anote esse estado inicial — é a base de comparação 
 
 # Parte 3 — Pontuação e Comparação
 
-**Responsável:** _(a definir)_
+**Responsável:** Denaide de Cassia Sónora Souza Costa
 
 ### Telas
 `/quiz` · `/progress` (Meu Progresso) · `/ranking`
@@ -142,7 +146,7 @@ Isso não é bug, é a regra dos 5 exercícios funcionando.
 
 # Parte 4 — Conteúdo com IA
 
-**Responsável:** _(a definir)_
+**Responsável:** Flavia
 
 ### Telas
 `/stories` (Historinhas) · `/interview` (Entrevistas) · `/chatbot` (Falar com Max) ·
@@ -210,5 +214,6 @@ nesse ponto específico — e isso está previsto.
 **Uma única dependência entre as partes:** a Parte 1 destrava as outras três. Quem pegar ela
 entrega primeiro, porque o resto do grupo está esperando conseguir entrar na plataforma.
 
-Se você está em dúvida sobre qual pegar e é sua primeira vez em QA: **a Parte 1 é a mais
-acessível**, porque tudo nela é previsível e o resultado é sempre o mesmo.
+Duas pessoas podem **trocar de parte** se as duas concordarem — basta avisar o grupo e
+atualizar este arquivo, o [06-sorteio-das-partes.md](06-sorteio-das-partes.md) e o `README.md`
+da pasta correspondente em [`cenarios/`](../cenarios/). O que não vale é trocar sem registrar.

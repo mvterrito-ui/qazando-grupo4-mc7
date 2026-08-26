@@ -1,6 +1,7 @@
 # Parte 3 — Pontuação e Comparação
 
-**Responsável:** _(a definir)_
+**Responsável:** Denaide de Cassia Sónora Souza Costa  
+*(definido por sorteio — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
 
 **Telas:** `/quiz` · `/progress` (Meu Progresso) · `/ranking`
 

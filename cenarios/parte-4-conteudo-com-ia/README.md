@@ -1,6 +1,7 @@
 # Parte 4 — Conteúdo com IA
 
-**Responsável:** _(a definir)_
+**Responsável:** Flavia  
+*(definido por sorteio — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
 
 **Telas:** `/stories` (Historinhas) · `/interview` (Entrevistas) · `/chatbot` (Falar com Max) ·
 `/words` (Gerador de Palavras) · `/pronunciation` (Treinar Fala)

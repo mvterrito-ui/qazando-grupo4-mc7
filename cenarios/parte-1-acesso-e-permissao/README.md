@@ -1,6 +1,7 @@
 # Parte 1 — Acesso e Permissão
 
-**Responsável:** _(a definir)_
+**Responsável:** Marcos Vinicio Territo  
+*(definido por sorteio — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
 
 **Telas:** `/auth` · `/activate-premium` · Painel Admin · regra de bloqueio premium em todas as rotas
 

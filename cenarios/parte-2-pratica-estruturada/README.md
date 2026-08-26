@@ -1,6 +1,7 @@
 # Parte 2 — Prática Estruturada
 
-**Responsável:** _(a definir)_
+**Responsável:** João Paulo  
+*(definido por sorteio — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
 
 **Telas:** `/duolingo` (Trilha do Inglês) · `/exercises` (Exercícios) · `/flashcards` (Flashcards QA)
 

@@ -2,12 +2,14 @@
 
 Uma pasta por parte do projeto. Trabalhe só na pasta da **sua** parte.
 
-| Pasta | Parte |
-|---|---|
-| [`parte-1-acesso-e-permissao/`](parte-1-acesso-e-permissao/) | Acesso e Permissão |
-| [`parte-2-pratica-estruturada/`](parte-2-pratica-estruturada/) | Prática Estruturada |
-| [`parte-3-pontuacao-e-comparacao/`](parte-3-pontuacao-e-comparacao/) | Pontuação e Comparação |
-| [`parte-4-conteudo-com-ia/`](parte-4-conteudo-com-ia/) | Conteúdo com IA |
+| Pasta | Parte | Responsável |
+|---|---|---|
+| [`parte-1-acesso-e-permissao/`](parte-1-acesso-e-permissao/) | Acesso e Permissão | Marcos Vinicio Territo |
+| [`parte-2-pratica-estruturada/`](parte-2-pratica-estruturada/) | Prática Estruturada | João Paulo |
+| [`parte-3-pontuacao-e-comparacao/`](parte-3-pontuacao-e-comparacao/) | Pontuação e Comparação | Denaide de Cassia Sónora Souza Costa |
+| [`parte-4-conteudo-com-ia/`](parte-4-conteudo-com-ia/) | Conteúdo com IA | Flavia |
+
+Os donos foram definidos por **sorteio** — ver [docs/06-sorteio-das-partes.md](../docs/06-sorteio-das-partes.md).
 
 ## Como trabalhar aqui
 

@@ -35,6 +35,7 @@ docs/                     ← entenda o projeto antes de testar
   03-ferramentas.md          quais ferramentas usamos e por quê
   04-guia-do-iniciante.md    ⭐ COMECE POR AQUI se é sua primeira vez
   05-glossario.md            tradução dos termos técnicos
+  06-sorteio-das-partes.md   quem ficou com qual parte, e como conferir o sorteio
 cenarios/                 ← um pasta por parte do projeto
 bugs/                     ← um arquivo por bug encontrado
 metricas/                 ← os números que a gente apresenta no final
@@ -53,8 +54,11 @@ metricas/                 ← os números que a gente apresenta no final
 4. **Leia a página `/docs` da plataforma inteira.** É a página *Documentação*, no menu lateral.
    Explicamos em [`docs/01-o-produto.md`](docs/01-o-produto.md) por que ela é a coisa mais
    importante deste projeto.
-5. **Descubra qual é a sua parte** em [`docs/02-divisao-em-4-partes.md`](docs/02-divisao-em-4-partes.md)
-   e abra a pasta dela em [`cenarios/`](cenarios/).
+5. **Veja qual parte você tirou no sorteio**, em
+   [`docs/06-sorteio-das-partes.md`](docs/06-sorteio-das-partes.md).
+6. **Leia o que a sua parte cobre** em
+   [`docs/02-divisao-em-4-partes.md`](docs/02-divisao-em-4-partes.md), e abra a pasta dela em
+   [`cenarios/`](cenarios/) para ver os cenários que já estão listados esperando você.
 
 ---
 
