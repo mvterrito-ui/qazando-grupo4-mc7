@@ -1,0 +1,23 @@
+# dependências
+node_modules/
+
+# saída de execução dos testes
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# segredos e sessões — NUNCA subir
+.env
+.env.local
+auth.json
+storage-state.json
+*.session.json
+
+# sistema operacional
+.DS_Store
+Thumbs.db
+
+# editores
+.vscode/
+.idea/
