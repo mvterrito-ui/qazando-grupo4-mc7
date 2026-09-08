@@ -8,6 +8,34 @@
 
 ---
 
+## ✅ Os cenários já estão escritos em Gherkin
+
+As 41 sementes abaixo viraram **58 cenários** em cinco arquivos `.feature`, e a automação
+correspondente **já roda verde contra o site**:
+
+| Arquivo | Cenários | Automatizados | Manuais |
+|---|---|---|---|
+| [`historinhas.feature`](historinhas.feature) | 11 | 9 | 2 |
+| [`entrevistas.feature`](entrevistas.feature) | 12 | 10 | 2 |
+| [`falar-com-max.feature`](falar-com-max.feature) | 13 | 11 | 2 |
+| [`gerador-palavras.feature`](gerador-palavras.feature) | 11 | 10 | 1 |
+| [`treinar-fala.feature`](treinar-fala.feature) | 11 | 5 | 6 |
+| **Total** | **58** | **45** | **13** |
+
+A automação correspondente está em
+[`automacao/tests/parte-4-conteudo-com-ia/`](../../automacao/tests/parte-4-conteudo-com-ia/) —
+46 testes verdes, 5 pulados, nenhuma falha (execução de 07/09/2026).
+
+Os cenários marcados `@manual` **não são automatizados de propósito**: são os que só um olho
+humano julga (se a tradução corresponde ao texto, se o áudio soa como a palavra escrita). Isso
+não é preguiça — máquina não avalia qualidade de texto.
+
+> **As sementes abaixo continuam valendo como checklist de exploração.** Escrever o cenário não
+> é o mesmo que ter testado no produto. Marque `[x]` conforme você confirmar cada um na tela
+> real — é isso que a métrica de "cenários levantados" conta.
+
+---
+
 ## Leia isto antes de escrever o primeiro cenário
 
 Esta parte tem uma dificuldade que as outras três não têm: **a IA responde diferente toda vez**.
