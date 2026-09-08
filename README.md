@@ -18,10 +18,11 @@ A atividade da mentoria pede seis coisas. Todas moram neste repositório ou na f
 |---|---|
 | Cenários de teste levantados | [`cenarios/`](cenarios/) |
 | Cenários escritos em Gherkin | [`cenarios/`](cenarios/), nos arquivos `.feature` |
-| Automação web | `automacao/` *(ainda não criada)* |
+| Automação web | [`automacao/`](automacao/) |
 | Bugs encontrados | [`bugs/`](bugs/) + ferramenta de gestão |
 | Projeto organizado em ferramenta | Ver [Ferramentas](docs/03-ferramentas.md) |
 | Métricas | [`metricas/`](metricas/) |
+| Reuniões entre os alunos | [`docs/atas/`](docs/atas/) |
 
 ---
 
@@ -36,7 +37,9 @@ docs/                     ← entenda o projeto antes de testar
   04-guia-do-iniciante.md    ⭐ COMECE POR AQUI se é sua primeira vez
   05-glossario.md            tradução dos termos técnicos
   06-sorteio-das-partes.md   quem ficou com qual parte, e como conferir o sorteio
+  atas/                      pauta e decisoes de cada reuniao
 cenarios/                 ← um pasta por parte do projeto
+automacao/                ← Playwright: os cenários virando teste que roda sozinho
 bugs/                     ← um arquivo por bug encontrado
 metricas/                 ← os números que a gente apresenta no final
 ```
