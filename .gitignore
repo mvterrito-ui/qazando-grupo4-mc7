@@ -21,3 +21,7 @@ Thumbs.db
 # editores
 .vscode/
 .idea/
+
+# automacao -- sessao salva pelo setup de login
+automacao/.auth/
+.auth/

@@ -1,0 +1,18 @@
+{
+  "name": "qazando-grupo4-mc7-automacao",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automacao web do projeto de testes do English QA - Grupo 4 (MC7)",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:parte-4": "playwright test tests/parte-4-conteudo-com-ia",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://english.qazando.com.br"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "dotenv": "^16.4.5"
+  }
+}
