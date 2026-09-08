@@ -5,7 +5,6 @@
 **Severidade:** Baixa
 **Encontrado por:** Grupo 4
 **Data:** 26/08/2026
-**Situação:** Aberto
 
 ## Descrição
 
