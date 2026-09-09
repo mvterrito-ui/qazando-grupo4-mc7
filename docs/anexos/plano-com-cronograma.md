@@ -14,7 +14,7 @@
 
 | # | Entregável | Onde vai morar |
 |---|---|---|
-| 1 | Cenários levantados | Ferramenta de gestão + `cenarios/` |
+| 1 | Cenários levantados | `cenarios/` (ver §3 — caso de teste no Jira exige plugin pago) |
 | 2 | Cenários em Gherkin (Dado/E/Quando/Então) | `cenarios/*.feature` |
 | 3 | Automação web (stack, arquitetura, pipeline) | `automacao/` + GitHub Actions |
 | 4 | Bugs reportados | Ferramenta de gestão + `bugs/` |
