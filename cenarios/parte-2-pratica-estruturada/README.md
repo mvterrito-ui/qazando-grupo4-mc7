@@ -44,6 +44,58 @@ Os cenários com `@manual` cobrem avaliações estritamente humanas (clareza ped
 
 ---
 
+## 📋 Acompanhamento da Execução Manual
+
+Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos atualizar o status:
+- ⏳ **A testar** | ✅ **Passou** | ❌ **Falhou** (apontando o Bug) | ⚠️ **Dúvida / Atenção**
+
+### Trilha do Inglês (`/duolingo`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **T01** | Visualizar 4 unidades progressivas na trilha | Visual | ⏳ A testar | |
+| **T02** | Conta nova inicia com apenas Lição 1 liberada (0 XP / 0 comp.) | Estado Inicial | ⏳ A testar | |
+| **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ⏳ A testar | |
+| **T04** | Impedir acesso a lição bloqueada (Lição 2) | Regra | ⏳ A testar | |
+| **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ⏳ A testar | |
+| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ⏳ A testar | |
+| **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ⏳ A testar | |
+| **T08** | Desbloqueio da Lição 2 persiste após mudar de tela e voltar | Persistência | ⏳ A testar | |
+| **T09** | Saldo de XP persiste após logout e novo login | Persistência | ⏳ A testar | |
+| **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ⏳ A testar | |
+| **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⏳ A testar | |
+
+### Exercícios (`/exercises`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **E01** | Visualizar tela inicial na questão "1 de 30" com progresso 0% | Estado Inicial | ⏳ A testar | |
+| **E02** | Resposta correta avança questão e percentual de progresso | Fluxo | ⏳ A testar | |
+| **E03** | Resposta incorreta exibe aviso e registra tentativa | Validação | ⏳ A testar | |
+| **E04** | Impedir envio com o campo de resposta em branco | Validação | ⏳ A testar | |
+| **E05** | Tolerar espaços extras antes ou depois da palavra | Formatação | ⏳ A testar | |
+| **E06** | Aceitar resposta correta digitada em letras maiúsculas | Formatação | ⏳ A testar | |
+| **E07** | Retomar de onde parou após sair da tela e voltar (regra 6) | Persistência | ⏳ A testar | |
+| **E08** | Retomar de onde parou após logout e novo login | Persistência | ⏳ A testar | |
+| **E09** | Histórico exibe respostas corretas e erradas registradas | Histórico | ⏳ A testar | |
+| **E10** | Recomeçar exercícios reseta contador para 1 de 30 | Fluxo | ⏳ A testar | |
+| **E11** | Comportamento do histórico após recomeçar os exercícios | Histórico | ⏳ A testar | |
+| **E12** | Conclusão da 30ª questão exibe término e atinge 100% | Conclusão | ⏳ A testar | |
+| **E13** | Correção gramatical e naturalidade das frases em inglês | `@manual` | ⏳ A testar | |
+
+### Flashcards QA (`/flashcards`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **F01** | Visualizar 40 cards na fila e 0 revisados/dominados | Estado Inicial | ⏳ A testar | |
+| **F02** | Revelar tradução (verso) habilita botões Difícil/Médio/Fácil | Interface | ⏳ A testar | |
+| **F03** | Avaliar card diminui "Na fila" e aumenta "Revisados hoje" | Estatística | ⏳ A testar | |
+| **F04** | Card classificado como dominado após critério do algoritmo | Estatística | ⏳ A testar | |
+| **F05** | Card avaliado como Difícil volta antes do Fácil (SM-2) | Algoritmo | ⏳ A testar | |
+| **F06** | Contagem de "Revisados hoje" persiste após mudar de rota | Persistência | ⏳ A testar | |
+| **F07** | Estatísticas persistem após logout e login no mesmo dia | Persistência | ⏳ A testar | |
+| **F08** | Recarregar página (F5) não reseta fila nem contadores | Persistência | ⏳ A testar | |
+| **F09** | Fidelidade da tradução dos termos técnicos de QA | `@manual` | ⏳ A testar | |
+
+---
+
 ## Estado inicial de uma conta nova
 
 Anote, porque é a base de comparação de tudo:
