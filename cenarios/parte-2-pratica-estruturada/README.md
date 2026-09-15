@@ -68,32 +68,32 @@ Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos a
 ### Exercícios (`/exercises`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |
 |---|---|---|---|---|
-| **E01** | Visualizar tela inicial na questão "1 de 30" com progresso 0% | Estado Inicial | ⏳ A testar | |
-| **E02** | Resposta correta avança questão e percentual de progresso | Fluxo | ⏳ A testar | |
-| **E03** | Resposta incorreta exibe aviso e registra tentativa | Validação | ⏳ A testar | |
-| **E04** | Impedir envio com o campo de resposta em branco | Validação | ⏳ A testar | |
-| **E05** | Tolerar espaços extras antes ou depois da palavra | Formatação | ⏳ A testar | |
-| **E06** | Aceitar resposta correta digitada em letras maiúsculas | Formatação | ⏳ A testar | |
-| **E07** | Retomar de onde parou após sair da tela e voltar (regra 6) | Persistência | ⏳ A testar | |
-| **E08** | Retomar de onde parou após logout e novo login | Persistência | ⏳ A testar | |
-| **E09** | Histórico exibe respostas corretas e erradas registradas | Histórico | ⏳ A testar | |
-| **E10** | Recomeçar exercícios reseta contador para 1 de 30 | Fluxo | ⏳ A testar | |
-| **E11** | Comportamento do histórico após recomeçar os exercícios | Histórico | ⏳ A testar | |
-| **E12** | Conclusão da 30ª questão exibe término e atinge 100% | Conclusão | ⏳ A testar | |
-| **E13** | Correção gramatical e naturalidade das frases em inglês | `@manual` | ⏳ A testar | |
+| **E01** | Visualizar tela inicial na questão "1 de 30" com progresso 0% | Estado Inicial | ✅ Passou | Tela inicia na questão 1 de 30 com progresso 0% e lacuna |
+| **E02** | Resposta correta avança questão e percentual de progresso | Fluxo | ✅ Passou | Resposta correta avança para a questão seguinte e incrementa progresso |
+| **E03** | Resposta incorreta exibe aviso e registra tentativa | Validação | ✅ Passou | Exibe aviso de erro e avança para a próxima questão registrando a tentativa |
+| **E04** | Impedir envio com o campo de resposta em branco | Validação | ✅ Passou | Sistema impede avanço e exige o preenchimento do campo |
+| **E05** | Tolerar espaços extras antes ou depois da palavra | Formatação | ✅ Passou | Aplica trim e aceita a resposta com espaços adicionais |
+| **E06** | Aceitar resposta correta digitada em letras maiúsculas | Formatação | ✅ Passou | Validação case-insensitive aceita respostas em maiúsculas |
+| **E07** | Retomar de onde parou após sair da tela e voltar (regra 6) | Persistência | ✅ Passou | Mudar de tela e retornar mantém a posição exata da questão e o progresso |
+| **E08** | Retomar de onde parou após logout e novo login | Persistência | ✅ Passou | Logout e novo login preservam o progresso e a questão subsequente |
+| **E09** | Histórico exibe respostas corretas e erradas registradas | Histórico | ✅ Passou | Histórico lista todas as tentativas identificando certas e erradas |
+| **E10** | Recomeçar exercícios reseta contador para 1 de 30 | Fluxo | ⚠️ Falha de UX | Reseta instantaneamente sem modal de confirmação, causando perda acidental do progresso |
+| **E11** | Comportamento do histórico após recomeçar os exercícios | Histórico | ⚠️ Atenção | O histórico de respostas é totalmente apagado junto com o progresso sem confirmação |
+| **E12** | Conclusão da 30ª questão exibe término e atinge 100% | Conclusão | ✅ Passou | Ao responder a questão 30, atinge 100% e exibe mensagem de conclusão |
+| **E13** | Correção gramatical e naturalidade das frases em inglês | `@manual` | ✅ Passou | Frases em inglês e lacunas gramaticalmente corretas e bem contextualizadas |
 
 ### Flashcards QA (`/flashcards`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |
 |---|---|---|---|---|
-| **F01** | Visualizar 40 cards na fila e 0 revisados/dominados | Estado Inicial | ⏳ A testar | |
-| **F02** | Revelar tradução (verso) habilita botões Difícil/Médio/Fácil | Interface | ⏳ A testar | |
-| **F03** | Avaliar card diminui "Na fila" e aumenta "Revisados hoje" | Estatística | ⏳ A testar | |
-| **F04** | Card classificado como dominado após critério do algoritmo | Estatística | ⏳ A testar | |
-| **F05** | Card avaliado como Difícil volta antes do Fácil (SM-2) | Algoritmo | ⏳ A testar | |
-| **F06** | Contagem de "Revisados hoje" persiste após mudar de rota | Persistência | ⏳ A testar | |
-| **F07** | Estatísticas persistem após logout e login no mesmo dia | Persistência | ⏳ A testar | |
-| **F08** | Recarregar página (F5) não reseta fila nem contadores | Persistência | ⏳ A testar | |
-| **F09** | Fidelidade da tradução dos termos técnicos de QA | `@manual` | ⏳ A testar | |
+| **F01** | Visualizar 40 cards na fila e 0 revisados/dominados | Estado Inicial | ✅ Passou | Exibe 40 cards na fila, 0 revisados hoje e 0 dominados |
+| **F02** | Revelar tradução (verso) habilita botões Difícil/Médio/Fácil | Interface | ✅ Passou | Revelar o verso exibe a tradução e os botões de avaliação |
+| **F03** | Avaliar card diminui "Na fila" e aumenta "Revisados hoje" | Estatística | ✅ Passou | Avaliação deduz da fila e incrementa o contador de revisados no dia |
+| **F04** | Card classificado como dominado após critério do algoritmo | Estatística | ⚠️ Observação | Marcar 'Fácil' 1 vez não classifica como Dominado de imediato (exige repetições pelo SM-2) |
+| **F05** | Card avaliado como Difícil volta antes do Fácil (SM-2) | Algoritmo | ⏳ A testar | Requer nova rodada de revisões para cronometrar retorno |
+| **F06** | Contagem de "Revisados hoje" persiste após mudar de rota | Persistência | ✅ Passou | 'Revisados hoje' é mantido após navegação entre telas |
+| **F07** | Estatísticas persistem após logout e login no mesmo dia | Persistência | ✅ Passou | Dados de revisão permanecem salvos após nova sessão |
+| **F08** | Recarregar página (F5) não reseta fila nem contadores | Persistência | ⚠️ Observação | 'Revisados hoje' persiste; fila extra recarregada é volátil em memória e zera no F5 |
+| **F09** | Fidelidade da tradução dos termos técnicos de QA | `@manual` | ✅ Passou | Termos e definições fiéis aos conceitos práticos de testes de software |
 
 ---
 
