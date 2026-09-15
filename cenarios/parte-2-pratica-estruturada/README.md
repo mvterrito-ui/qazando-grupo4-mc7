@@ -52,17 +52,17 @@ Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos a
 ### Trilha do Inglês (`/duolingo`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |
 |---|---|---|---|---|
-| **T01** | Visualizar 4 unidades progressivas na trilha | Visual | ⏳ A testar | |
-| **T02** | Conta nova inicia com apenas Lição 1 liberada (0 XP / 0 comp.) | Estado Inicial | ⏳ A testar | |
-| **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ⏳ A testar | |
-| **T04** | Impedir acesso a lição bloqueada (Lição 2) | Regra | ⏳ A testar | |
-| **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ⏳ A testar | |
-| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ⏳ A testar | |
-| **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ⏳ A testar | |
-| **T08** | Desbloqueio da Lição 2 persiste após mudar de tela e voltar | Persistência | ⏳ A testar | |
-| **T09** | Saldo de XP persiste após logout e novo login | Persistência | ⏳ A testar | |
-| **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ⏳ A testar | |
-| **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⏳ A testar | |
+| **T01** | Visualizar 4 unidades progressivas na trilha | Visual | ✅ Passou | 4 unidades exibidas progressivamente na tela |
+| **T02** | Conta nova inicia com apenas Lição 1 liberada (0 XP / 0 comp.) | Estado Inicial | ✅ Passou | Conta nova iniciou com Lição 1 liberada, 0 XP e 0 completadas |
+| **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ✅ Passou | Unidades 2, 3 e 4 exibidas como bloqueadas |
+| **T04** | Impedir acesso a lição bloqueada (Lição 2) | Regra | ✅ Passou | Clicar em lição bloqueada não inicia a atividade |
+| **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ✅ Passou | Lição anterior marcada como concluída e a seguinte desbloqueada |
+| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ❌ Falhou | Promete +25 XP na interface, mas credita 30 XP |
+| **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ✅ Passou | Contador incrementa a cada lição concluída |
+| **T08** | Desbloqueio da Lição 2 persiste após mudar de tela e voltar | Persistência | ✅ Passou | Navegar para outra rota e retornar preserva as lições desbloqueadas |
+| **T09** | Saldo de XP persiste após logout e novo login | Persistência | ✅ Passou | Saldo de XP e progresso preservados após nova autenticação |
+| **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ✅ Passou | Recarregar a página mantém contadores e estado das lições |
+| **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⚠️ Observação | Unidade 1 ensina vocabulário de inglês geral/cotidiano, e não termos estritos de QA |
 
 ### Exercícios (`/exercises`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |
