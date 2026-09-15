@@ -57,13 +57,13 @@ Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos a
 | **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ✅ Passou | Unidades 2, 3 e 4 exibidas como bloqueadas |
 | **T04** | Impedir acesso a lição bloqueada (Lição 2) | Regra | ✅ Passou | Clicar em lição bloqueada não inicia a atividade |
 | **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ✅ Passou | Lição anterior marcada como concluída e a seguinte desbloqueada |
-| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ❌ Falhou | Promete +25 XP na interface, mas credita 30 XP |
+| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ❌ Falhou | Promete +25 XP na interface, mas credita 30 XP — ver [Bug 006](../../bugs/006-trilha-promete-25-xp-mas-credita-30.md) |
 | **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ✅ Passou | Contador incrementa a cada lição concluída |
 | **T08** | Desbloqueio da Lição 2 persiste após mudar de tela e voltar | Persistência | ✅ Passou | Navegar para outra rota e retornar preserva as lições desbloqueadas |
 | **T09** | Saldo de XP persiste após logout e novo login | Persistência | ✅ Passou | Saldo de XP e progresso preservados após nova autenticação |
 | **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ✅ Passou | Recarregar a página mantém contadores e estado das lições |
 | **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⚠️ Observação | Unidade 1 ensina vocabulário de inglês geral/cotidiano, e não termos estritos de QA |
-| **T12** | Errar todas as questões não deve concluir a lição | Regra/Fluxo | ❌ Falhou | Exibe 'Lição completa: você ganhou 0 XP' e desbloqueia a fase seguinte mesmo com 100% de erros |
+| **T12** | Errar todas as questões não deve concluir a lição | Regra/Fluxo | ❌ Falhou | Exibe 'Lição completa: você ganhou 0 XP' e desbloqueia a fase seguinte — ver [Bug 007](../../bugs/007-trilha-conclui-licao-com-100-porcento-de-erros.md) |
 
 ### Exercícios (`/exercises`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |
