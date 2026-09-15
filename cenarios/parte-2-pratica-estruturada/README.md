@@ -31,14 +31,14 @@
 
 ## ✅ Os cenários já estão escritos em Gherkin
 
-As 27 sementes abaixo foram estruturadas em **33 cenários** em três arquivos `.feature`:
+As 27 sementes abaixo foram estruturadas em **34 cenários** em três arquivos `.feature`:
 
 | Arquivo | Cenários | Automatizáveis | Manuais |
 |---|---|---|---|
-| [`trilha.feature`](trilha.feature) | 12 | 11 | 1 |
+| [`trilha.feature`](trilha.feature) | 13 | 12 | 1 |
 | [`exercicios.feature`](exercicios.feature) | 12 | 11 | 1 |
 | [`flashcards.feature`](flashcards.feature) | 9 | 8 | 1 |
-| **Total** | **33** | **30** | **3** |
+| **Total** | **34** | **31** | **3** |
 
 Os cenários com `@manual` cobrem avaliações estritamente humanas (clareza pedagógica, naturalidade gramatical e adequação da tradução técnica).
 
@@ -63,6 +63,7 @@ Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos a
 | **T09** | Saldo de XP persiste após logout e novo login | Persistência | ✅ Passou | Saldo de XP e progresso preservados após nova autenticação |
 | **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ✅ Passou | Recarregar a página mantém contadores e estado das lições |
 | **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⚠️ Observação | Unidade 1 ensina vocabulário de inglês geral/cotidiano, e não termos estritos de QA |
+| **T12** | Errar todas as questões não deve concluir a lição | Regra/Fluxo | ❌ Falhou | Exibe 'Lição completa: você ganhou 0 XP' e desbloqueia a fase seguinte mesmo com 100% de erros |
 
 ### Exercícios (`/exercises`)
 | ID | Cenário | Tipo | Status | Observações / Evidência |

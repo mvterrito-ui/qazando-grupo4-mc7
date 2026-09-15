@@ -49,6 +49,13 @@ Funcionalidade: Trilha do Inglês — Unidades, Lições, XP e Persistência
     Então a Lição 1 deve ser marcada como concluída
     E a Lição 2 deve ser desbloqueada imediatamente
 
+  Cenário: Errar todas as questões da lição não deve desbloquear a lição seguinte
+    Dado que a Lição 1 está disponível e a Lição 2 está bloqueada
+    Quando respondo incorretamente a todas as questões da Lição 1
+    Então a lição não deve ser considerada concluída
+    E a Lição 2 deve permanecer bloqueada
+    E o sistema deve orientar a refazer a lição
+
   Cenário: Concluir uma lição credita o XP prometido
     Dado que o meu saldo atual de XP é conhecido
     Quando concluo uma lição que promete "+25 XP"
