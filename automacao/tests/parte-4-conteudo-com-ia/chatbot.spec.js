@@ -3,7 +3,7 @@
 //
 // Seletores conferidos na tela real em 07/09/2026.
 const { test, expect } = require('@playwright/test');
-const { ChatbotPage } = require('../../pages/chatbot.page');
+const { ChatbotPage } = require('../../pages/parte-4-conteudo-com-ia/chatbot.page');
 const { esperarCarregamentoSumir, pontuacaoPortugues } = require('../../support/ia');
 
 test.describe('/chatbot - Falar com Max', () => {

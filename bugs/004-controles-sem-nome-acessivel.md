@@ -55,7 +55,7 @@ Comparar com os vizinhos, que estão corretos: "Gravar áudio", "Nova Conversa" 
 Isto atrapalhou a automação antes de atrapalhar qualquer usuário. Um teste não
 consegue localizar o botão de enviar por nome — foi preciso ancorá-lo no vizinho
 ("o botão logo depois de *Gravar áudio*"), o que é frágil: muda a ordem dos
-botões e o teste quebra. Ver `automacao/pages/chatbot.page.js`.
+botões e o teste quebra. Ver `automacao/pages/parte-4-conteudo-com-ia/chatbot.page.js`.
 
 Pelo mesmo motivo, o cenário "o avatar aparece e some" **não pôde ser
 automatizado** e virou `@manual` no `falar-com-max.feature`: sem nome nem texto

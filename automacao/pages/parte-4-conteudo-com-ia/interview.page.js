@@ -1,5 +1,5 @@
 // PAGE OBJECT -- /interview (Entrevistas)
-const { esperarCarregamentoSumir, textoDoBlocoDe } = require('../support/ia');
+const { esperarCarregamentoSumir, textoDoBlocoDe } = require('../../support/ia');
 
 class InterviewPage {
   constructor(page) {

@@ -10,7 +10,7 @@
 // Ele NAO contem expect -- afirmar e trabalho do teste, nao da tela.
 // ============================================================================
 
-const { esperarCarregamentoSumir } = require('../support/ia');
+const { esperarCarregamentoSumir } = require('../../support/ia');
 
 class WordsPage {
   constructor(page) {

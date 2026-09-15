@@ -1,7 +1,7 @@
 // Automatiza: cenarios/parte-4-conteudo-com-ia/historinhas.feature
 // Comentado de forma resumida -- o exemplo explicado linha a linha e words.spec.js
 const { test, expect } = require('@playwright/test');
-const { StoriesPage } = require('../../pages/stories.page');
+const { StoriesPage } = require('../../pages/parte-4-conteudo-com-ia/stories.page');
 const { esperarTextoNaoVazio, afirmarIdiomas, afirmarConteudoDiferente,
         esperarCarregamentoSumir, apareceu } = require('../../support/ia');
 

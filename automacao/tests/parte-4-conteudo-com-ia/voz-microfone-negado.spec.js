@@ -16,8 +16,8 @@
 // caminho de texto. O que NAO se aceita: nada acontecer.
 // ============================================================================
 const { test, expect } = require('@playwright/test');
-const { ChatbotPage } = require('../../pages/chatbot.page');
-const { PronunciationPage } = require('../../pages/pronunciation.page');
+const { ChatbotPage } = require('../../pages/parte-4-conteudo-com-ia/chatbot.page');
+const { PronunciationPage } = require('../../pages/parte-4-conteudo-com-ia/pronunciation.page');
 
 test.describe('microfone negado pelo navegador', () => {
 

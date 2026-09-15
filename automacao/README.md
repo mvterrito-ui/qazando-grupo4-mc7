@@ -50,7 +50,7 @@ automacao/
   .env                   SUA conta (nunca vai para o git)
   setup/
     auth.setup.js        ⭐ login + premium — roda 1x, serve as 4 partes
-  pages/                 seletores de cada tela, um arquivo por tela
+  pages/                 seletores de cada tela, uma pasta por parte
   support/
     ia.js                ajudantes para testar conteúdo gerado por IA
   tests/
@@ -200,7 +200,7 @@ Se ainda assim um seletor não bater na sua parte:
 npx playwright codegen https://english.qazando.com.br/words
 ```
 
-Clique nos elementos, veja o seletor que o Playwright sugere, ajuste o `pages/*.page.js` e
+Clique nos elementos, veja o seletor que o Playwright sugere, ajuste o `pages/parte-N-.../*.page.js` e
 apague o aviso. **Só os arquivos de `pages/` precisam mudar** — é para isso que eles existem.
 
 ---
@@ -210,7 +210,7 @@ apague o aviso. **Só os arquivos de `pages/` precisam mudar** — é para isso 
 1. **Não mexa em `setup/`.** Seu teste já começa logado e com premium.
 2. **Escreva os `.feature` primeiro**, em `cenarios/parte-N-.../`. O Gherkin é a especificação
    completa, inclusive do que fica manual.
-3. **Crie um `pages/suatela.page.js`** por tela. Só seletores e ações — **nenhum `expect`**.
+3. **Crie um `pages/parte-N-.../suatela.page.js`** por tela, na pasta da sua parte. Só seletores e ações — **nenhum `expect`**.
    Afirmar é trabalho do teste, não da tela.
 4. **Crie `tests/parte-N-.../suatela.spec.js`.** Comece pelo cabeçalho apontando qual `.feature`
    ele automatiza.
@@ -235,6 +235,6 @@ O que a sua parte tem de diferente:
 |---|---|
 | `Faltam QA_EMAIL e QA_PASSWORD` | o `.env` não existe ou está vazio — `cp .env.example .env` |
 | `Não consegui ativar o premium` | código mudou; confira em `/activate-premium`. Se recusou código válido, **é bug** |
-| Teste não acha um elemento | seletor desatualizado — conserte o `pages/*.page.js`, não o spec |
+| Teste não acha um elemento | seletor desatualizado — conserte o `pages/parte-N-.../*.page.js`, não o spec |
 | Tudo falha logo no começo | rode `npx playwright test --project=setup` sozinho e veja onde o login para |
 | Muito lento | é a IA respondendo. Normal levar de 2 a 30 segundos por geração |

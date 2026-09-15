@@ -28,7 +28,7 @@
 // ============================================================================
 
 const { test, expect } = require('@playwright/test');
-const { PronunciationPage } = require('../../pages/pronunciation.page');
+const { PronunciationPage } = require('../../pages/parte-4-conteudo-com-ia/pronunciation.page');
 const { apareceu } = require('../../support/ia');
 
 test.describe('/pronunciation - gravacao de voz', () => {

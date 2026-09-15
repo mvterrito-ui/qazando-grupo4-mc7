@@ -2,7 +2,7 @@
 // Uma das duas telas com microfone. Os testes de voz rodam no projeto
 // "microfone" do playwright.config.js, que usa dispositivo falso.
 const { expect } = require('@playwright/test');
-const { esperarCarregamentoSumir, textoDoBlocoDe } = require('../support/ia');
+const { esperarCarregamentoSumir, textoDoBlocoDe } = require('../../support/ia');
 
 class ChatbotPage {
   constructor(page) {

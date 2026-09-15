@@ -5,7 +5,7 @@
 // soltas, nao <label> ligados ao campo, e o placeholder comeca com "Ex:".
 // Por isso getByLabel e getByPlaceholder(/tema/) nao funcionam aqui --
 // o que resta estavel e o PAPEL do elemento.
-const { esperarCarregamentoSumir } = require('../support/ia');
+const { esperarCarregamentoSumir } = require('../../support/ia');
 
 class StoriesPage {
   constructor(page) {

@@ -1,6 +1,6 @@
 // PAGE OBJECT -- /pronunciation (Treinar Fala)
 // A tela mais tecnica do projeto: depende de microfone.
-const { esperarCarregamentoSumir } = require('../support/ia');
+const { esperarCarregamentoSumir } = require('../../support/ia');
 
 class PronunciationPage {
   constructor(page) {

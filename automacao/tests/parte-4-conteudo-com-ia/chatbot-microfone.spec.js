@@ -9,7 +9,7 @@
 // mundo esquece de testar, e e onde a tela costuma travar em silencio.
 // ============================================================================
 const { test, expect } = require('@playwright/test');
-const { ChatbotPage } = require('../../pages/chatbot.page');
+const { ChatbotPage } = require('../../pages/parte-4-conteudo-com-ia/chatbot.page');
 
 test.describe('/chatbot - entrada por voz', () => {
 

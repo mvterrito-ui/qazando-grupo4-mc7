@@ -1,7 +1,7 @@
 // Automatiza: cenarios/parte-4-conteudo-com-ia/treinar-fala.feature
 // (a parte que NAO depende de microfone -- o resto em pronunciation-microfone.spec.js)
 const { test, expect } = require('@playwright/test');
-const { PronunciationPage } = require('../../pages/pronunciation.page');
+const { PronunciationPage } = require('../../pages/parte-4-conteudo-com-ia/pronunciation.page');
 const { afirmarConteudoDiferente, pontuacaoIngles,
         pontuacaoPortugues } = require('../../support/ia');
 

@@ -1,6 +1,6 @@
 // Automatiza: cenarios/parte-4-conteudo-com-ia/entrevistas.feature
 const { test, expect } = require('@playwright/test');
-const { InterviewPage } = require('../../pages/interview.page');
+const { InterviewPage } = require('../../pages/parte-4-conteudo-com-ia/interview.page');
 const { esperarTextoNaoVazio, afirmarConteudoDiferente, esperarCarregamentoSumir,
         apareceu, pontuacaoIngles, pontuacaoPortugues } = require('../../support/ia');
 

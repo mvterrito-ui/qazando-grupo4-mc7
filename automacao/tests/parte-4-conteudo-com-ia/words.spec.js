@@ -13,7 +13,7 @@
 // ============================================================================
 
 const { test, expect } = require('@playwright/test');
-const { WordsPage } = require('../../pages/words.page');
+const { WordsPage } = require('../../pages/parte-4-conteudo-com-ia/words.page');
 const { esperarCarregamentoSumir } = require('../../support/ia');
 
 // describe agrupa os testes de uma tela. O relatorio HTML usa este nome, entao
