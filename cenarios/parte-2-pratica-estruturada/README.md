@@ -29,6 +29,21 @@
 
 ---
 
+## ✅ Os cenários já estão escritos em Gherkin
+
+As 27 sementes abaixo foram estruturadas em **33 cenários** em três arquivos `.feature`:
+
+| Arquivo | Cenários | Automatizáveis | Manuais |
+|---|---|---|---|
+| [`trilha.feature`](trilha.feature) | 12 | 11 | 1 |
+| [`exercicios.feature`](exercicios.feature) | 12 | 11 | 1 |
+| [`flashcards.feature`](flashcards.feature) | 9 | 8 | 1 |
+| **Total** | **33** | **30** | **3** |
+
+Os cenários com `@manual` cobrem avaliações estritamente humanas (clareza pedagógica, naturalidade gramatical e adequação da tradução técnica).
+
+---
+
 ## Estado inicial de uma conta nova
 
 Anote, porque é a base de comparação de tudo:
@@ -42,40 +57,38 @@ Anote, porque é a base de comparação de tudo:
 
 ## Cenários-semente
 
-Marque `[x]` conforme for escrevendo o `.feature`. **Aumente a lista** conforme explorar.
-
 ### Trilha do Inglês
-- [ ] Conferir que só a Lição 1 da Unidade 1 está liberada numa conta nova *(regra 2)*
-- [ ] Tentar abrir a Lição 2 antes de concluir a Lição 1 *(regra 2 — deve continuar bloqueada)*
-- [ ] Concluir a Lição 1 e conferir se a Lição 2 libera *(regra 2)*
-- [ ] Concluir a Lição 1 e conferir se o XP subiu *(regra 3)*
-- [ ] Conferir se o XP que a lição prometia ("+25 XP") é o XP que foi creditado
-- [ ] Conferir se o contador "Completadas" subiu de 0 para 1
-- [ ] Conferir que as Unidades 2, 3 e 4 continuam bloqueadas
-- [ ] **Sair da plataforma, entrar de novo e conferir se o progresso continua lá** *(regra 4)*
+- [x] Conferir que só a Lição 1 da Unidade 1 está liberada numa conta nova *(regra 2)*
+- [x] Tentar abrir a Lição 2 antes de concluir a Lição 1 *(regra 2 — deve continuar bloqueada)*
+- [x] Concluir a Lição 1 e conferir se a Lição 2 libera *(regra 2)*
+- [x] Concluir a Lição 1 e conferir se o XP subiu *(regra 3)*
+- [x] Conferir se o XP que a lição prometia ("+25 XP") é o XP que foi creditado
+- [x] Conferir se o contador "Completadas" subiu de 0 para 1
+- [x] Conferir que as Unidades 2, 3 e 4 continuam bloqueadas
+- [x] **Sair da plataforma, entrar de novo e conferir se o progresso continua lá** *(regra 4)*
 
 ### Exercícios
-- [ ] Responder uma questão certa e ver o contador avançar *(caminho feliz)*
-- [ ] Responder uma questão errada e ver como a tela reage
-- [ ] Enviar a resposta com o campo vazio
-- [ ] Responder com espaços a mais antes ou depois da palavra
-- [ ] Responder com a palavra certa em maiúsculas
-- [ ] **Responder 3 questões, sair da tela, voltar e conferir se retomou na questão 4** *(regra 6)*
-- [ ] Recomeçar os exercícios e conferir se o contador volta para 1 de 30 *(regra 7)*
-- [ ] Depois de recomeçar, conferir o que aconteceu com o histórico anterior
-- [ ] Conferir se o histórico mostra a resposta errada que você acabou de dar *(regra 8)*
-- [ ] Chegar na questão 30 e ver o que acontece ao terminar *(regra 5)*
+- [x] Responder uma questão certa e ver o contador avançar *(caminho feliz)*
+- [x] Responder uma questão errada e ver como a tela reage
+- [x] Enviar a resposta com o campo vazio
+- [x] Responder com espaços a mais antes ou depois da palavra
+- [x] Responder com a palavra certa em maiúsculas
+- [x] **Responder 3 questões, sair da tela, voltar e conferir se retomou na questão 4** *(regra 6)*
+- [x] Recomeçar os exercícios e conferir se o contador volta para 1 de 30 *(regra 7)*
+- [x] Depois de recomeçar, conferir o que aconteceu com o histórico anterior
+- [x] Conferir se o histórico mostra a resposta errada que você acabou de dar *(regra 8)*
+- [x] Chegar na questão 30 e ver o que acontece ao terminar *(regra 5)*
 
 ### Flashcards
-- [ ] Conferir os 40 cards iniciais numa conta nova *(regra 9)*
-- [ ] Mostrar a tradução de um card e conferir se corresponde à palavra
-- [ ] Avaliar um card como Fácil e observar quando ele volta *(regra 11)*
-- [ ] Avaliar um card como Difícil e observar quando ele volta *(regra 11)*
-- [ ] Comparar: o card marcado como Difícil deve voltar antes do marcado como Fácil
-- [ ] Conferir se "Na fila" diminui a cada card avaliado *(regra 12)*
-- [ ] Conferir se "Revisados hoje" aumenta a cada card avaliado *(regra 12)*
-- [ ] Descobrir o que faz um card ser contado como "Dominado" *(regra 12)*
-- [ ] **Sair, voltar no mesmo dia e conferir se "Revisados hoje" manteve a contagem**
+- [x] Conferir os 40 cards iniciais numa conta nova *(regra 9)*
+- [x] Mostrar a tradução de um card e conferir se corresponde à palavra
+- [x] Avaliar um card como Fácil e observar quando ele volta *(regra 11)*
+- [x] Avaliar um card como Difícil e observar quando ele volta *(regra 11)*
+- [x] Comparar: o card marcado como Difícil deve voltar antes do marcado como Fácil
+- [x] Conferir se "Na fila" diminui a cada card avaliado *(regra 12)*
+- [x] Conferir se "Revisados hoje" aumenta a cada card avaliado *(regra 12)*
+- [x] Descobrir o que faz um card ser contado como "Dominado" *(regra 12)*
+- [x] **Sair, voltar no mesmo dia e conferir se "Revisados hoje" manteve a contagem**
 
 ---
 
