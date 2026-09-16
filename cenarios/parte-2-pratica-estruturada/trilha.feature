@@ -34,10 +34,10 @@ Funcionalidade: Trilha do Inglês — Unidades, Lições, XP e Persistência
     Então as Unidades 2, 3 e 4 devem estar marcadas como bloqueadas
 
   Cenário: Impedir o acesso direto a uma lição bloqueada
-    Dado que a Lição 2 está bloqueada
-    Quando tento acessar a Lição 2
+    Dado que existe uma lição bloqueada na trilha
+    Quando tento acessar uma lição bloqueada
     Então o sistema deve me manter na trilha
-    E a Lição 2 não deve ser iniciada
+    E a lição bloqueada não deve ser iniciada
 
   # ------------------------------------------------------------------
   # Desbloqueio e Pontuação (Caminho feliz) — regras 2 e 3

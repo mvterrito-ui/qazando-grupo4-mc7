@@ -55,7 +55,7 @@ Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos a
 | **T01** | Visualizar 4 unidades progressivas na trilha | Visual | ✅ Passou | 4 unidades exibidas progressivamente na tela |
 | **T02** | Conta nova inicia com apenas Lição 1 liberada (0 XP / 0 comp.) | Estado Inicial | ✅ Passou | Conta nova iniciou com Lição 1 liberada, 0 XP e 0 completadas |
 | **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ✅ Passou | Unidades 2, 3 e 4 exibidas como bloqueadas |
-| **T04** | Impedir acesso a lição bloqueada (Lição 2) | Regra | ✅ Passou | Clicar em lição bloqueada não inicia a atividade |
+| **T04** | Impedir acesso a lição bloqueada | Regra | ✅ Passou | Clicar em lição bloqueada não inicia a atividade |
 | **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ✅ Passou | Lição anterior marcada como concluída e a seguinte desbloqueada |
 | **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ❌ Falhou | Promete +25 XP na interface, mas credita 30 XP — ver [Bug 006](../../bugs/006-trilha-promete-25-xp-mas-credita-30.md) |
 | **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ✅ Passou | Contador incrementa a cada lição concluída |
