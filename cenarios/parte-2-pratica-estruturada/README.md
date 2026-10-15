@@ -29,6 +29,74 @@
 
 ---
 
+## ✅ Os cenários já estão escritos em Gherkin
+
+As 27 sementes abaixo foram estruturadas em **34 cenários** em três arquivos `.feature`:
+
+| Arquivo | Cenários | Automatizáveis | Manuais |
+|---|---|---|---|
+| [`trilha.feature`](trilha.feature) | 13 | 12 | 1 |
+| [`exercicios.feature`](exercicios.feature) | 12 | 11 | 1 |
+| [`flashcards.feature`](flashcards.feature) | 9 | 8 | 1 |
+| **Total** | **34** | **31** | **3** |
+
+Os cenários com `@manual` cobrem avaliações estritamente humanas (clareza pedagógica, naturalidade gramatical e adequação da tradução técnica).
+
+---
+
+## 📋 Acompanhamento da Execução Manual
+
+Use esta tabela para acompanhar os seus testes. Conforme for testando, podemos atualizar o status:
+- ⏳ **A testar** | ✅ **Passou** | ❌ **Falhou** (apontando o Bug) | ⚠️ **Dúvida / Atenção**
+
+### Trilha do Inglês (`/duolingo`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **T01** | Visualizar 4 unidades progressivas na trilha | Visual | ✅ Passou | 4 unidades exibidas progressivamente na tela |
+| **T02** | Conta nova inicia com apenas Lição 1 liberada (0 XP / 0 comp.) | Estado Inicial | ✅ Passou | Conta nova iniciou com Lição 1 liberada, 0 XP e 0 completadas |
+| **T03** | Unidades 2, 3 e 4 iniciam bloqueadas | Bloqueio | ✅ Passou | Unidades 2, 3 e 4 exibidas como bloqueadas |
+| **T04** | Impedir acesso a lição bloqueada | Regra | ✅ Passou | Clicar em lição bloqueada não inicia a atividade |
+| **T05** | Concluir Lição 1 desbloqueia Lição 2 sequencialmente | Fluxo | ✅ Passou | Lição anterior marcada como concluída e a seguinte desbloqueada |
+| **T06** | Concluir lição credita o XP prometido (+25 XP) | Pontuação | ❌ Falhou | Promete +25 XP na interface, mas credita 30 XP — ver [Bug 006](../../bugs/006-trilha-promete-25-xp-mas-credita-30.md) |
+| **T07** | Incremento do contador de lições completadas (0 para 1) | Contador | ✅ Passou | Contador incrementa a cada lição concluída |
+| **T08** | Desbloqueio da Lição 2 persiste após mudar de tela e voltar | Persistência | ✅ Passou | Navegar para outra rota e retornar preserva as lições desbloqueadas |
+| **T09** | Saldo de XP persiste após logout e novo login | Persistência | ✅ Passou | Saldo de XP e progresso preservados após nova autenticação |
+| **T10** | Contador e lições persistem após recarregar a página (F5) | Persistência | ✅ Passou | Recarregar a página mantém contadores e estado das lições |
+| **T11** | Vocabulário da lição no contexto de testes de software | `@manual` | ⚠️ Observação | Unidade 1 ensina vocabulário de inglês geral/cotidiano, e não termos estritos de QA |
+| **T12** | Errar todas as questões não deve concluir a lição | Regra/Fluxo | ❌ Falhou | Exibe 'Lição completa: você ganhou 0 XP' e desbloqueia a fase seguinte — ver [Bug 007](../../bugs/007-trilha-conclui-licao-com-100-porcento-de-erros.md) |
+
+### Exercícios (`/exercises`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **E01** | Visualizar tela inicial na questão "1 de 30" com progresso 0% | Estado Inicial | ✅ Passou | Tela inicia na questão 1 de 30 com progresso 0% e lacuna |
+| **E02** | Resposta correta avança questão e percentual de progresso | Fluxo | ✅ Passou | Resposta correta avança para a questão seguinte e incrementa progresso |
+| **E03** | Resposta incorreta exibe aviso e registra tentativa | Validação | ✅ Passou | Exibe aviso de erro e avança para a próxima questão registrando a tentativa |
+| **E04** | Impedir envio com o campo de resposta em branco | Validação | ✅ Passou | Sistema impede avanço e exige o preenchimento do campo |
+| **E05** | Tolerar espaços extras antes ou depois da palavra | Formatação | ✅ Passou | Aplica trim e aceita a resposta com espaços adicionais |
+| **E06** | Aceitar resposta correta digitada em letras maiúsculas | Formatação | ✅ Passou | Validação case-insensitive aceita respostas em maiúsculas |
+| **E07** | Retomar de onde parou após sair da tela e voltar (regra 6) | Persistência | ✅ Passou | Mudar de tela e retornar mantém a posição exata da questão e o progresso |
+| **E08** | Retomar de onde parou após logout e novo login | Persistência | ✅ Passou | Logout e novo login preservam o progresso e a questão subsequente |
+| **E09** | Histórico exibe respostas corretas e erradas registradas | Histórico | ✅ Passou | Histórico lista todas as tentativas identificando certas e erradas |
+| **E10** | Recomeçar exercícios reseta contador para 1 de 30 | Fluxo | ⚠️ Falha de UX | Reseta instantaneamente sem modal de confirmação, causando perda acidental do progresso |
+| **E11** | Comportamento do histórico após recomeçar os exercícios | Histórico | ⚠️ Atenção | O histórico de respostas é totalmente apagado junto com o progresso sem confirmação |
+| **E12** | Conclusão da 30ª questão exibe término e atinge 100% | Conclusão | ✅ Passou | Ao responder a questão 30, atinge 100% e exibe mensagem de conclusão |
+| **E13** | Correção gramatical e naturalidade das frases em inglês | `@manual` | ✅ Passou | Frases em inglês e lacunas gramaticalmente corretas e bem contextualizadas |
+
+### Flashcards QA (`/flashcards`)
+| ID | Cenário | Tipo | Status | Observações / Evidência |
+|---|---|---|---|---|
+| **F01** | Visualizar 40 cards na fila e 0 revisados/dominados | Estado Inicial | ✅ Passou | Exibe 40 cards na fila, 0 revisados hoje e 0 dominados |
+| **F02** | Revelar tradução (verso) habilita botões Difícil/Médio/Fácil | Interface | ✅ Passou | Revelar o verso exibe a tradução e os botões de avaliação |
+| **F03** | Avaliar card diminui "Na fila" e aumenta "Revisados hoje" | Estatística | ✅ Passou | Avaliação deduz da fila e incrementa o contador de revisados no dia |
+| **F04** | Card classificado como dominado após critério do algoritmo | Estatística | ⚠️ Observação | Marcar 'Fácil' 1 vez não classifica como Dominado de imediato (exige repetições pelo SM-2) |
+| **F05** | Card avaliado como Difícil volta antes do Fácil (SM-2) | Algoritmo | ⏳ A testar | Requer nova rodada de revisões para cronometrar retorno |
+| **F06** | Contagem de "Revisados hoje" persiste após mudar de rota | Persistência | ✅ Passou | 'Revisados hoje' é mantido após navegação entre telas |
+| **F07** | Estatísticas persistem após logout e login no mesmo dia | Persistência | ✅ Passou | Dados de revisão permanecem salvos após nova sessão |
+| **F08** | Recarregar página (F5) não reseta fila nem contadores | Persistência | ⚠️ Observação | 'Revisados hoje' persiste; fila extra recarregada é volátil em memória e zera no F5 |
+| **F09** | Fidelidade da tradução dos termos técnicos de QA | `@manual` | ✅ Passou | Termos e definições fiéis aos conceitos práticos de testes de software |
+
+---
+
 ## Estado inicial de uma conta nova
 
 Anote, porque é a base de comparação de tudo:
@@ -42,40 +110,38 @@ Anote, porque é a base de comparação de tudo:
 
 ## Cenários-semente
 
-Marque `[x]` conforme for escrevendo o `.feature`. **Aumente a lista** conforme explorar.
-
 ### Trilha do Inglês
-- [ ] Conferir que só a Lição 1 da Unidade 1 está liberada numa conta nova *(regra 2)*
-- [ ] Tentar abrir a Lição 2 antes de concluir a Lição 1 *(regra 2 — deve continuar bloqueada)*
-- [ ] Concluir a Lição 1 e conferir se a Lição 2 libera *(regra 2)*
-- [ ] Concluir a Lição 1 e conferir se o XP subiu *(regra 3)*
-- [ ] Conferir se o XP que a lição prometia ("+25 XP") é o XP que foi creditado
-- [ ] Conferir se o contador "Completadas" subiu de 0 para 1
-- [ ] Conferir que as Unidades 2, 3 e 4 continuam bloqueadas
-- [ ] **Sair da plataforma, entrar de novo e conferir se o progresso continua lá** *(regra 4)*
+- [x] Conferir que só a Lição 1 da Unidade 1 está liberada numa conta nova *(regra 2)*
+- [x] Tentar abrir a Lição 2 antes de concluir a Lição 1 *(regra 2 — deve continuar bloqueada)*
+- [x] Concluir a Lição 1 e conferir se a Lição 2 libera *(regra 2)*
+- [x] Concluir a Lição 1 e conferir se o XP subiu *(regra 3)*
+- [x] Conferir se o XP que a lição prometia ("+25 XP") é o XP que foi creditado
+- [x] Conferir se o contador "Completadas" subiu de 0 para 1
+- [x] Conferir que as Unidades 2, 3 e 4 continuam bloqueadas
+- [x] **Sair da plataforma, entrar de novo e conferir se o progresso continua lá** *(regra 4)*
 
 ### Exercícios
-- [ ] Responder uma questão certa e ver o contador avançar *(caminho feliz)*
-- [ ] Responder uma questão errada e ver como a tela reage
-- [ ] Enviar a resposta com o campo vazio
-- [ ] Responder com espaços a mais antes ou depois da palavra
-- [ ] Responder com a palavra certa em maiúsculas
-- [ ] **Responder 3 questões, sair da tela, voltar e conferir se retomou na questão 4** *(regra 6)*
-- [ ] Recomeçar os exercícios e conferir se o contador volta para 1 de 30 *(regra 7)*
-- [ ] Depois de recomeçar, conferir o que aconteceu com o histórico anterior
-- [ ] Conferir se o histórico mostra a resposta errada que você acabou de dar *(regra 8)*
-- [ ] Chegar na questão 30 e ver o que acontece ao terminar *(regra 5)*
+- [x] Responder uma questão certa e ver o contador avançar *(caminho feliz)*
+- [x] Responder uma questão errada e ver como a tela reage
+- [x] Enviar a resposta com o campo vazio
+- [x] Responder com espaços a mais antes ou depois da palavra
+- [x] Responder com a palavra certa em maiúsculas
+- [x] **Responder 3 questões, sair da tela, voltar e conferir se retomou na questão 4** *(regra 6)*
+- [x] Recomeçar os exercícios e conferir se o contador volta para 1 de 30 *(regra 7)*
+- [x] Depois de recomeçar, conferir o que aconteceu com o histórico anterior
+- [x] Conferir se o histórico mostra a resposta errada que você acabou de dar *(regra 8)*
+- [x] Chegar na questão 30 e ver o que acontece ao terminar *(regra 5)*
 
 ### Flashcards
-- [ ] Conferir os 40 cards iniciais numa conta nova *(regra 9)*
-- [ ] Mostrar a tradução de um card e conferir se corresponde à palavra
-- [ ] Avaliar um card como Fácil e observar quando ele volta *(regra 11)*
-- [ ] Avaliar um card como Difícil e observar quando ele volta *(regra 11)*
-- [ ] Comparar: o card marcado como Difícil deve voltar antes do marcado como Fácil
-- [ ] Conferir se "Na fila" diminui a cada card avaliado *(regra 12)*
-- [ ] Conferir se "Revisados hoje" aumenta a cada card avaliado *(regra 12)*
-- [ ] Descobrir o que faz um card ser contado como "Dominado" *(regra 12)*
-- [ ] **Sair, voltar no mesmo dia e conferir se "Revisados hoje" manteve a contagem**
+- [x] Conferir os 40 cards iniciais numa conta nova *(regra 9)*
+- [x] Mostrar a tradução de um card e conferir se corresponde à palavra
+- [x] Avaliar um card como Fácil e observar quando ele volta *(regra 11)*
+- [x] Avaliar um card como Difícil e observar quando ele volta *(regra 11)*
+- [x] Comparar: o card marcado como Difícil deve voltar antes do marcado como Fácil
+- [x] Conferir se "Na fila" diminui a cada card avaliado *(regra 12)*
+- [x] Conferir se "Revisados hoje" aumenta a cada card avaliado *(regra 12)*
+- [x] Descobrir o que faz um card ser contado como "Dominado" *(regra 12)*
+- [x] **Sair, voltar no mesmo dia e conferir se "Revisados hoje" manteve a contagem**
 
 ---
 

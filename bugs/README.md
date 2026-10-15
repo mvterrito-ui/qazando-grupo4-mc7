@@ -25,6 +25,8 @@ o cartão dele no Jira, pelo link da tabela abaixo.
 | [003](003-titulo-progresso-texto-residual.md) | Título da tela de progresso tem texto residual | 3 | Baixa | *(a criar)* |
 | [004](004-controles-sem-nome-acessivel.md) | Controles do chat não têm nome acessível | 4 | Média | *(a criar)* |
 | [005](005-microfone-negado-falha-em-silencio.md) | Microfone negado: a tela não avisa nada | 4 | Média | *(a criar)* |
+| [006](006-trilha-promete-25-xp-mas-credita-30.md) | Lição da Trilha promete +25 XP mas credita 30 XP | 2 | Média | *(a criar)* |
+| [007](007-trilha-conclui-licao-com-100-porcento-de-erros.md) | Trilha conclui lição e desbloqueia próxima fase com 100% de erros | 2 | Alta | *(a criar)* |
 
 > Nenhum foi aberto no Jira ainda — é a tarefa 3 da semana 1. Ao criar cada cartão,
 > troque o *(a criar)* pelo link dele.
