@@ -1,0 +1,11 @@
+{
+  "questao1": {
+    "numero": 1,
+    "total": 30,
+    "frasePortugues": "Você está indo ao parque amanhã?",
+    "fraseIngles": "Are _______ going to the park tomorrow?",
+    "respostaCorreta": "you",
+    "progressoInicial": "0%",
+    "proximaQuestao": 2
+  }
+}
