@@ -19,6 +19,11 @@ class PronunciationPage {
     this.botaoOuvir = page.getByRole('button', { name: /ouvir pron[uú]ncia/i })
       .or(page.getByRole('button', { name: /ouvir|escutar/i })).first();
 
+    // Enquanto o audio toca, o MESMO botao troca o texto para "Reproduzindo..."
+    // e fica desabilitado. Ele so volta a "Ouvir" quando o navegador avisa que o
+    // audio terminou -- e a tela nao trata erro: sem voz instalada, nao volta.
+    this.botaoReproduzindo = page.getByRole('button', { name: /reproduzindo/i });
+
     // O botao de gravar se chama "Falar Agora e Receber Feedback".
     this.botaoGravar = page.getByRole('button', { name: /falar agora/i })
       .or(page.getByRole('button', { name: /gravar|record/i })).first();
@@ -44,6 +49,24 @@ class PronunciationPage {
     await this.frase.waitFor({ state: 'visible', timeout: 90000 });
     await esperarCarregamentoSumir(this.page);
     return (await this.frase.innerText()).trim();
+  }
+
+  /**
+   * Quantas vozes de sintese o navegador tem. A lista carrega de forma
+   * assincrona, entao espera o evento "voiceschanged" por ate 3 segundos.
+   * No runner Linux do GitHub Actions costuma ser 0.
+   */
+  async vozesDisponiveis() {
+    return this.page.evaluate(() => new Promise((resolve) => {
+      if (!('speechSynthesis' in window)) return resolve(0);
+      const agora = window.speechSynthesis.getVoices().length;
+      if (agora > 0) return resolve(agora);
+      const fim = setTimeout(() => resolve(window.speechSynthesis.getVoices().length), 3000);
+      window.speechSynthesis.addEventListener('voiceschanged', () => {
+        clearTimeout(fim);
+        resolve(window.speechSynthesis.getVoices().length);
+      }, { once: true });
+    }));
   }
 
   /** Grava por alguns segundos e encerra. O audio vem do dispositivo falso

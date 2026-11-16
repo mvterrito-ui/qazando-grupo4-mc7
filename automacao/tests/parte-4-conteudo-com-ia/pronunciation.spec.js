@@ -30,13 +30,38 @@ test.describe('/pronunciation - Treinar Fala', () => {
   });
 
   test('oferece ouvir a pronuncia correta antes de gravar', async () => {
-    // Regra 17. Conferimos que o controle existe e responde ao clique.
+    // Regra 17. Conferimos que o controle existe e que o audio COMECA.
     // Se o audio soa igual a frase e cenario @manual -- maquina nao julga isso.
     await fala.gerarFrase();
     await expect(fala.botaoOuvir).toBeVisible();
     await expect(fala.botaoOuvir).toBeEnabled();
     await fala.botaoOuvir.click();
-    await expect(fala.botaoOuvir).toBeVisible(); // clicar nao pode quebrar a tela
+
+    // "Entao o audio deve ser reproduzido": o botao entra em "Reproduzindo...".
+    await expect(
+      fala.botaoReproduzindo,
+      'O clique em ouvir nao iniciou a reproducao'
+    ).toBeVisible();
+
+    // Clicar nao pode quebrar a tela: gravar continua disponivel.
+    await expect(fala.botaoGravar).toBeEnabled();
+
+    // Voltar para "Ouvir" depende de o navegador ter voz instalada. O runner
+    // Linux do GitHub Actions nao tem: o audio nunca termina e o botao fica
+    // em "Reproduzindo..." para sempre -- foi o vermelho da pipeline de
+    // 09/09 e 15/09. Sem voz, cobrar isso seria testar a maquina, nao o site.
+    const vozes = await fala.vozesDisponiveis();
+    if (vozes > 0) {
+      await expect(
+        fala.botaoOuvir,
+        'O botao nao voltou a "Ouvir" depois de o audio terminar'
+      ).toBeEnabled();
+    } else {
+      test.info().annotations.push({
+        type: 'sem voz',
+        description: 'Navegador sem voz de sintese: a volta do botao para "Ouvir" nao foi conferida.',
+      });
+    }
   });
 
   test('gerar frase nova limpa o feedback da tentativa anterior', async ({ page }) => {
