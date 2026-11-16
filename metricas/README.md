@@ -41,7 +41,7 @@ Preencha a cada atualização. Copie a última linha e ajuste.
 |---|---|---|---|---|---|---|---|
 | 26/08/2026 | 0 | 0 | 0% | 3 | 0 | 0 | — |
 | 07/09/2026 | 58 | 45 | 78% | 5 | 0 | 0 | — |
-| 16/11/2026 | 92 | 57 | 62% | 7 | 0 | 0 | 0 de 3 |
+| 16/11/2026 | 92 | 57 | 62% | 7 | 0 | 0 | 2 de 5 |
 
 *(Os 3 bugs iniciais são os que estão em [`../bugs/`](../bugs/), encontrados na exploração
 inicial do produto.)*
@@ -61,10 +61,11 @@ manual e de duas etapas.
 e seguem em aberto pelo motivo antecipado abaixo: não há canal com o time do produto. Os testes
 dos bugs abertos usam `test.fail()` e avisam sozinhos se algum deles for corrigido.
 
-**Pipeline: 0 verdes em 3 execuções** (15/09, 15/10 e 06/11). A causa foi a mesma nas três:
+**Pipeline: as 3 primeiras execuções ficaram vermelhas** (15/09, 15/10 e 06/11), pela mesma causa:
 o teste de *ouvir a pronúncia* cobrava que o botão voltasse de "Reproduzindo..." para "Ouvir",
 e o servidor Linux do GitHub Actions não tem voz de síntese instalada — o áudio nunca termina.
-O teste foi corrigido para só cobrar isso quando o navegador tem voz.
+O teste foi corrigido para só cobrar isso quando o navegador tem voz, e as duas execuções
+seguintes, em 16/11, ficaram verdes — as primeiras do projeto. Total: **2 verdes em 5 execuções**.
 
 ### Nota sobre a linha de 07/09/2026
 
