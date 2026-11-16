@@ -5,7 +5,7 @@
 **Severidade:** Média  
 **Encontrado por:** João Paulo  
 **Data:** 15/09/2026  
-**Cartão no Jira:** *(a criar)*  
+**Cartão no Jira:** SCRUM-34  
 
 ## Descrição
 

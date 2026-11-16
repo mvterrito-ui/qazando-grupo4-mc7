@@ -35,8 +35,8 @@ As 27 sementes abaixo foram estruturadas em **34 cenários** em três arquivos `
 
 | Arquivo | Cenários | Automatizáveis | Manuais |
 |---|---|---|---|
-| [`trilha.feature`](trilha.feature) | 13 | 12 | 1 |
-| [`exercicios.feature`](exercicios.feature) | 12 | 11 | 1 |
+| [`trilha.feature`](trilha.feature) | 12 | 11 | 1 |
+| [`exercicios.feature`](exercicios.feature) | 13 | 12 | 1 |
 | [`flashcards.feature`](flashcards.feature) | 9 | 8 | 1 |
 | **Total** | **34** | **31** | **3** |
 

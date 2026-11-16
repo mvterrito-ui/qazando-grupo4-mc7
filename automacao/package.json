@@ -7,6 +7,7 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
+    "test:parte-2": "playwright test tests/parte-2-pratica-estruturada",
     "test:parte-4": "playwright test tests/parte-4-conteudo-com-ia",
     "report": "playwright show-report",
     "codegen": "playwright codegen https://english.qazando.com.br"

@@ -26,6 +26,23 @@ A atividade da mentoria pede seis coisas. Todas moram neste repositório ou na f
 
 ---
 
+## Situação na entrega
+
+| Parte | Responsável | Cenários (Gherkin) | Automatizados | Bugs |
+|---|---|---|---|---|
+| 1 — Acesso e Permissão | Flavia | — | — | 001 |
+| 2 — Prática Estruturada | João Paulo | 34 | 12 | 006, 007 |
+| 3 — Pontuação e Comparação | Denaide | — | — | 003 |
+| 4 — Conteúdo com IA | Marcos | 58 | 45 | 002, 004, 005 |
+| **Total** | | **92** | **57** | **7** |
+
+As Partes 1 e 3 não ficaram prontas para a entrega e serão concluídas pelo grupo depois dela.
+Os bugs 001 e 003 vieram da exploração inicial do produto, antes da divisão. Os números
+detalhados e a forma de contar estão em [`metricas/`](metricas/); os bugs e os cartões do Jira,
+em [`bugs/`](bugs/).
+
+---
+
 ## Como este repositório está organizado
 
 ```

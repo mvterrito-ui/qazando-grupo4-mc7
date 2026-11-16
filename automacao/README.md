@@ -32,6 +32,7 @@ Depois:
 ```bash
 npm test                # roda tudo
 npm run test:ui         # modo visual — comece por aqui
+npm run test:parte-2    # só a Parte 2
 npm run test:parte-4    # só a Parte 4
 npm run report          # abre o relatório da última execução
 ```
@@ -54,9 +55,9 @@ automacao/
   support/
     ia.js                ajudantes para testar conteúdo gerado por IA
   tests/
-    parte-1-acesso-e-permissao/     (vazia — Flavia)
-    parte-2-pratica-estruturada/    (vazia — João Paulo)
-    parte-3-pontuacao-e-comparacao/ (vazia — Denaide)
+    parte-1-acesso-e-permissao/     (vazia — Flavia, fica para depois da entrega)
+    parte-2-pratica-estruturada/    João Paulo — trilha, exercícios e flashcards
+    parte-3-pontuacao-e-comparacao/ (vazia — Denaide, fica para depois da entrega)
     parte-4-conteudo-com-ia/        Marcos — o exemplo
 ```
 
@@ -91,7 +92,7 @@ aqui antes de a separação existir.
 
 ### Estado da suíte
 
-Última execução completa contra o site, 07/09/2026: **46 verdes, 5 pulados, nenhuma falha.**
+Última execução da **Parte 4** contra o site, 16/11/2026: **46 verdes, 5 pulados, nenhuma falha.**
 
 Os 5 pulados são deliberados e documentados no próprio arquivo:
 - 4 de gravação de voz — o reconhecimento de fala do navegador não funciona com áudio

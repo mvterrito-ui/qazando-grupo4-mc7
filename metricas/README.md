@@ -41,10 +41,30 @@ Preencha a cada atualização. Copie a última linha e ajuste.
 |---|---|---|---|---|---|---|---|
 | 26/08/2026 | 0 | 0 | 0% | 3 | 0 | 0 | — |
 | 07/09/2026 | 58 | 45 | 78% | 5 | 0 | 0 | — |
+| 16/11/2026 | 92 | 57 | 62% | 7 | 0 | 0 | 0 de 3 |
 
 *(Os 3 bugs iniciais são os que estão em [`../bugs/`](../bugs/), encontrados na exploração
 inicial do produto.)*
 
+
+### Nota sobre a linha de 16/11/2026 — fechamento da entrega
+
+**Cenários: 92**, de duas partes — 58 da Parte 4 e 34 da Parte 2. As Partes 1 e 3 não entram
+nesta entrega e serão concluídas pelo grupo depois dela.
+
+**Automatizados: 57** — 45 da Parte 4 e 12 da Parte 2. Medido rodando contra o site em
+16/11/2026: Parte 4 com 46 testes verdes, 5 pulados e nenhuma falha; Parte 2 com 12 verdes.
+O `%` caiu de 78% para 62%, como previsto na nota de 07/09: a Parte 2 entrou com mais cenário
+manual e de duas etapas.
+
+**Bugs: 7 abertos, 0 corrigidos, 0 retestados.** Os sete estão no Jira (SCRUM-5 a 9, 34 e 35)
+e seguem em aberto pelo motivo antecipado abaixo: não há canal com o time do produto. Os testes
+dos bugs abertos usam `test.fail()` e avisam sozinhos se algum deles for corrigido.
+
+**Pipeline: 0 verdes em 3 execuções** (15/09, 15/10 e 06/11). A causa foi a mesma nas três:
+o teste de *ouvir a pronúncia* cobrava que o botão voltasse de "Reproduzindo..." para "Ouvir",
+e o servidor Linux do GitHub Actions não tem voz de síntese instalada — o áudio nunca termina.
+O teste foi corrigido para só cobrar isso quando o navegador tem voz.
 
 ### Nota sobre a linha de 07/09/2026
 

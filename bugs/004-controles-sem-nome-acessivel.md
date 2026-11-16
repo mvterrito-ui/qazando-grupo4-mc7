@@ -5,7 +5,7 @@
 **Severidade:** Média
 **Encontrado por:** Marcos Vinicio Territo (automação)
 **Data:** 07/09/2026
-**Cartão no Jira:** *(a criar)*
+**Cartão no Jira:** SCRUM-8
 
 ## Descrição
 

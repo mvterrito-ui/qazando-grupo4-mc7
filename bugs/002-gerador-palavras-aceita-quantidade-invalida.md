@@ -5,6 +5,7 @@
 **Severidade:** Média
 **Encontrado por:** Grupo 4
 **Data:** 26/08/2026
+**Cartão no Jira:** SCRUM-6
 
 ## Descrição
 

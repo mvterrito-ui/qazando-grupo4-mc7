@@ -24,15 +24,15 @@ correspondente **já roda verde contra o site**:
 
 A automação correspondente está em
 [`automacao/tests/parte-4-conteudo-com-ia/`](../../automacao/tests/parte-4-conteudo-com-ia/) —
-46 testes verdes, 5 pulados, nenhuma falha (execução de 07/09/2026).
+46 testes verdes, 5 pulados, nenhuma falha (execução de 16/11/2026).
 
 Os cenários marcados `@manual` **não são automatizados de propósito**: são os que só um olho
 humano julga (se a tradução corresponde ao texto, se o áudio soa como a palavra escrita). Isso
 não é preguiça — máquina não avalia qualidade de texto.
 
-> **As sementes abaixo continuam valendo como checklist de exploração.** Escrever o cenário não
-> é o mesmo que ter testado no produto. Marque `[x]` conforme você confirmar cada um na tela
-> real — é isso que a métrica de "cenários levantados" conta.
+> **As sementes abaixo estão todas confirmadas no produto.** Escrever o cenário não é o mesmo
+> que ter testado: cada uma foi conferida na tela real, pela automação (execução de 16/11/2026)
+> ou pela execução dos 13 cenários manuais (Jira, SCRUM-31).
 
 ---
 
@@ -103,56 +103,56 @@ preguiça: é a decisão certa. Máquina não julga se um texto ficou bom.
 ## Cenários-semente
 
 ### Historinhas
-- [ ] Gerar uma história com um tema comum *(caminho feliz)* — conferir que veio texto em
+- [x] Gerar uma história com um tema comum *(caminho feliz)* — conferir que veio texto em
       inglês e tradução em português *(regra 2)*
-- [ ] Gerar com o campo de tema **vazio**
-- [ ] Gerar com um tema de **1 caractere**
-- [ ] Gerar com um tema **muito longo** (cole um parágrafo inteiro)
-- [ ] Gerar com o tema em inglês em vez de português
-- [ ] Gerar duas histórias com o **mesmo tema** e conferir que são diferentes *(regra 4)*
-- [ ] Conferir se a tradução corresponde ao texto em inglês — este fica no manual
-- [ ] Conferir se o "carregando" aparece durante a geração e some depois
+- [x] Gerar com o campo de tema **vazio**
+- [x] Gerar com um tema de **1 caractere**
+- [x] Gerar com um tema **muito longo** (cole um parágrafo inteiro)
+- [x] Gerar com o tema em inglês em vez de português
+- [x] Gerar duas histórias com o **mesmo tema** e conferir que são diferentes *(regra 4)*
+- [x] Conferir se a tradução corresponde ao texto em inglês — este fica no manual
+- [x] Conferir se o "carregando" aparece durante a geração e some depois
 
 ### Entrevistas
-- [ ] Gerar uma pergunta e conferir que veio em inglês *(regra 5)*
-- [ ] Responder normalmente e receber o feedback *(caminho feliz — regra 7)*
-- [ ] Enviar a resposta **vazia**
-- [ ] Responder com **uma única palavra**
-- [ ] Responder **em português** e ver como a IA reage
-- [ ] Traduzir o feedback e conferir se traduziu o feedback certo *(regra 8)*
-- [ ] Traduzir duas vezes seguidas e ver o que acontece
-- [ ] Gerar uma pergunta nova sem ter respondido a anterior
+- [x] Gerar uma pergunta e conferir que veio em inglês *(regra 5)*
+- [x] Responder normalmente e receber o feedback *(caminho feliz — regra 7)*
+- [x] Enviar a resposta **vazia**
+- [x] Responder com **uma única palavra**
+- [x] Responder **em português** e ver como a IA reage
+- [x] Traduzir o feedback e conferir se traduziu o feedback certo *(regra 8)*
+- [x] Traduzir duas vezes seguidas e ver o que acontece
+- [x] Gerar uma pergunta nova sem ter respondido a anterior
 
 ### Falar com Max
-- [ ] Enviar uma mensagem e receber resposta *(caminho feliz — regra 9)*
-- [ ] Enviar mensagem vazia
-- [ ] Enviar uma mensagem muito longa
-- [ ] Traduzir uma mensagem da conversa *(regra 11)*
-- [ ] Ligar e desligar o avatar durante a conversa *(regra 12)*
-- [ ] Iniciar uma "Nova Conversa" e conferir se a anterior sumiu
-- [ ] **Negar a permissão de microfone** e conferir se a tela avisa em vez de travar *(regra 10)*
-- [ ] Conceder o microfone e usar a entrada por voz *(regra 10)*
+- [x] Enviar uma mensagem e receber resposta *(caminho feliz — regra 9)*
+- [x] Enviar mensagem vazia
+- [x] Enviar uma mensagem muito longa
+- [x] Traduzir uma mensagem da conversa *(regra 11)*
+- [x] Ligar e desligar o avatar durante a conversa *(regra 12)*
+- [x] Iniciar uma "Nova Conversa" e conferir se a anterior sumiu
+- [x] **Negar a permissão de microfone** e conferir se a tela avisa em vez de travar *(regra 10)*
+- [x] Conceder o microfone e usar a entrada por voz *(regra 10)*
 
 ### Gerador de Palavras
-- [ ] Gerar 10 palavras sobre um tema *(caminho feliz)*
-- [ ] Conferir se vieram **exatamente** 10 palavras — a quantidade pedida é a entregue?
-- [ ] Conferir se cada palavra veio com tradução e frase de exemplo *(regra 14)*
-- [ ] Gerar com quantidade **1** *(limite mínimo válido — regra 13)*
-- [ ] Gerar com quantidade **100** *(limite máximo válido — regra 13)*
-- [ ] Gerar com quantidade **0** *(inválido — já achamos bug aqui, ver bug 002)*
-- [ ] Gerar com quantidade **101** *(inválido — ver bug 002)*
-- [ ] Gerar com quantidade **negativa** *(inválido — ver bug 002)*
-- [ ] Gerar com o campo de tema vazio
-- [ ] Tocar o áudio de uma palavra e conferir se toca a palavra certa *(regra 15)*
+- [x] Gerar 10 palavras sobre um tema *(caminho feliz)*
+- [x] Conferir se vieram **exatamente** 10 palavras — a quantidade pedida é a entregue?
+- [x] Conferir se cada palavra veio com tradução e frase de exemplo *(regra 14)*
+- [x] Gerar com quantidade **1** *(limite mínimo válido — regra 13)*
+- [x] Gerar com quantidade **100** *(limite máximo válido — regra 13)*
+- [x] Gerar com quantidade **0** *(inválido — já achamos bug aqui, ver bug 002)*
+- [x] Gerar com quantidade **101** *(inválido — ver bug 002)*
+- [x] Gerar com quantidade **negativa** *(inválido — ver bug 002)*
+- [x] Gerar com o campo de tema vazio
+- [x] Tocar o áudio de uma palavra e conferir se toca a palavra certa *(regra 15)*
 
 ### Treinar Fala
-- [ ] Gerar uma frase para praticar *(regra 16)*
-- [ ] Ouvir a pronúncia correta antes de gravar *(regra 17)*
-- [ ] Gravar a voz e receber o feedback *(caminho feliz — regra 18)*
-- [ ] Conferir se o feedback mostra o reconhecido e o esperado lado a lado *(regra 19)*
-- [ ] **Negar a permissão de microfone** e conferir se a tela avisa em vez de travar
-- [ ] Gravar em silêncio, sem falar nada
-- [ ] Gerar uma frase nova sem ter gravado a anterior
+- [x] Gerar uma frase para praticar *(regra 16)*
+- [x] Ouvir a pronúncia correta antes de gravar *(regra 17)*
+- [x] Gravar a voz e receber o feedback *(caminho feliz — regra 18)*
+- [x] Conferir se o feedback mostra o reconhecido e o esperado lado a lado *(regra 19)*
+- [x] **Negar a permissão de microfone** e conferir se a tela avisa em vez de travar
+- [x] Gravar em silêncio, sem falar nada
+- [x] Gerar uma frase nova sem ter gravado a anterior
 
 ---
 
