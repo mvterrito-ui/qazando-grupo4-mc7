@@ -30,13 +30,14 @@ A atividade da mentoria pede seis coisas. Todas moram neste repositório ou na f
 
 | Parte | Responsável | Cenários (Gherkin) | Automatizados | Bugs |
 |---|---|---|---|---|
-| 1 — Acesso e Permissão | Flavia | — | — | 001 |
+| 1 — Acesso e Permissão | João Paulo | em andamento | — | 001 |
 | 2 — Prática Estruturada | João Paulo | 34 | 12 | 006, 007 |
-| 3 — Pontuação e Comparação | Denaide | — | — | 003 |
+| 3 — Pontuação e Comparação | Marcos | 33 | 31 | 003, 008 a 012 |
 | 4 — Conteúdo com IA | Marcos | 58 | 45 | 002, 004, 005 |
-| **Total** | | **92** | **57** | **7** |
+| **Total** | | **125** | **88** | **12** |
 
-As Partes 1 e 3 não ficaram prontas para a entrega e serão concluídas pelo grupo depois dela.
+As Partes 1 e 3 não ficaram prontas para a entrega de 24/11 e foram retomadas depois dela:
+a Parte 3 foi concluída pelo Marcos em 25/11/2026, e a Parte 1 está com o João Paulo.
 Os bugs 001 e 003 vieram da exploração inicial do produto, antes da divisão. Os números
 detalhados e a forma de contar estão em [`metricas/`](metricas/); os bugs e os cartões do Jira,
 em [`bugs/`](bugs/).

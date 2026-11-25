@@ -1,0 +1,7 @@
+{
+  "_comentario": "Traducoes corretas das primeiras perguntas do quiz, conferidas na tela em 25/11/2026. O quiz sempre recomeca pela mesma ordem (happy, dog, ...). Usadas so quando o teste precisa ACERTAR de proposito, como no cenario do XP.",
+  "respostasCorretas": {
+    "happy": "feliz",
+    "dog": "cachorro"
+  }
+}

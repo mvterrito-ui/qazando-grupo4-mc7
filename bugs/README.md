@@ -27,10 +27,18 @@ o cartão dele no Jira, pelo link da tabela abaixo.
 | [005](005-microfone-negado-falha-em-silencio.md) | Microfone negado: a tela não avisa nada | 4 | Média | SCRUM-9 |
 | [006](006-trilha-promete-25-xp-mas-credita-30.md) | Lição da Trilha promete +25 XP mas credita 30 XP | 2 | Média | SCRUM-34 |
 | [007](007-trilha-conclui-licao-com-100-porcento-de-erros.md) | Trilha conclui lição e desbloqueia próxima fase com 100% de erros | 2 | Alta | SCRUM-35 |
+| [008](008-duplo-clique-no-quiz-registra-resposta-duas-vezes.md) | Duplo clique no Quiz registra a resposta duas vezes e as três telas divergem | 3 | Média | *(a criar)* |
+| [009](009-quiz-nao-credita-xp-por-acerto.md) | Acertos no Quiz não creditam XP | 3 | Média | *(a criar)* |
+| [010](010-ranking-lista-quem-tem-menos-de-5-exercicios.md) | Ranking lista alunos com menos de 5 exercícios | 3 | Média | *(a criar)* |
+| [011](011-ranking-ordena-por-taxa-e-nao-por-acertos.md) | Ranking ordena por taxa de acerto, e não por total de acertos | 3 | Média | *(a criar)* |
+| [012](012-ranking-nao-exibe-email.md) | Ranking não exibe o e-mail, e nomes repetidos ficam indistinguíveis | 3 | Baixa | *(a criar)* |
 
-> Os sete estão no Jira, no quadro do projeto (chave `SCRUM`), e **todos seguem em aberto**:
+> Os bugs 001 a 007 estão no Jira, no quadro do projeto (chave `SCRUM`), e **todos seguem em aberto**:
 > o grupo não tem canal com quem desenvolve o English QA, então nenhum foi corrigido. Um bug só
 > sai de aberto quando alguém corrige e o grupo retesta.
+>
+> Os bugs 008 a 012, da Parte 3, foram encontrados em 25/11/2026 e ainda precisam de cartão
+> no Jira. Ao criar cada um, troque o *(a criar)* pela chave dele.
 
 
 ## Um padrão que já aparece duas vezes
