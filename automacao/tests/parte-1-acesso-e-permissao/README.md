@@ -1,6 +1,6 @@
 # Testes automatizados — Parte 1 — Acesso e Permissão
 
-**Responsável:** Flavia
+**Responsável:** João Paulo
 
 Esta pasta está vazia. É aqui que os seus `.spec.js` vão morar.
 

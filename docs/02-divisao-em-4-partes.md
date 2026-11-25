@@ -36,7 +36,7 @@ Ninguém depende de ninguém para começar. Cada pessoa tem sua área e toca ela
 
 # Parte 1 — Acesso e Permissão
 
-**Responsável:** Flavia
+**Responsável:** João Paulo *(desde 25/11/2026 — ver [06-sorteio-das-partes.md](06-sorteio-das-partes.md))*
 
 ### Telas
 `/auth` (login, cadastro, esqueci minha senha, entrar com Google, entrar com Apple) ·
@@ -106,7 +106,7 @@ na fila dos flashcards. Anote esse estado inicial — é a base de comparação 
 
 # Parte 3 — Pontuação e Comparação
 
-**Responsável:** Denaide de Cassia Sónora Souza Costa
+**Responsável:** Marcos Vinicio Territo *(desde 25/11/2026 — ver [06-sorteio-das-partes.md](06-sorteio-das-partes.md))*
 
 ### Telas
 `/quiz` · `/progress` (Meu Progresso) · `/ranking`
