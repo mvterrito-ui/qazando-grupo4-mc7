@@ -16,6 +16,22 @@ const dados = require('../../data/parte-2-pratica-estruturada/exercises.data.jso
 test.describe.serial('/exercises - Exercícios (Complete a Frase)', () => {
   let exercises;
 
+  // O progresso dos exercicios fica salvo na conta. Se uma execucao anterior parou
+  // no meio (ex.: EX-C02 respondeu e o EX-C04 nao chegou a rodar), a conta continua
+  // na questao 2 e o EX-C01 falha para sempre. Por isso o bloco comeca recomecando.
+  test.beforeAll(async ({ browser }, testInfo) => {
+    const { baseURL, storageState } = testInfo.project.use;
+    const context = await browser.newContext({ baseURL, storageState });
+    const pagina = new ExercisesPage(await context.newPage());
+    await pagina.abrir();
+    await pagina.indicadorQuestao.waitFor();
+    if (await pagina.botaoRecomecar.isVisible()) {
+      await pagina.clicarRecomecar();
+      await pagina.indicadorQuestao.filter({ hasText: /^\s*1\s*de\s*30/ }).waitFor();
+    }
+    await context.close();
+  });
+
   test.beforeEach(async ({ page }) => {
     exercises = new ExercisesPage(page);
     await exercises.abrir();
