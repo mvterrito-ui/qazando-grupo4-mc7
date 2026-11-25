@@ -12,6 +12,9 @@
 
 const { test, expect } = require('@playwright/test');
 const { TrilhaPage } = require('../../pages/parte-2-pratica-estruturada/trilha.page');
+const path = require('path');
+
+const ARQUIVO_SESSAO = path.resolve(__dirname, '../../.auth/premium.json');
 
 test.describe('/duolingo - Trilha do Inglês', () => {
   let trilha;
@@ -119,6 +122,11 @@ test.describe('/duolingo - Trilha do Inglês', () => {
 
     // Refaz login com a conta do usuário
     await trilha.fazerLogin(email, senha);
+
+    // O logout encerra no servidor a sessao salva pelo setup em .auth/premium.json.
+    // Sem regravar o arquivo, os testes seguintes abrem com uma sessao morta: as telas
+    // que validam a sessao no servidor (ex.: /progress) mandam para o /auth.
+    await page.context().storageState({ path: ARQUIVO_SESSAO });
 
     // Acessa novamente a Trilha do Inglês
     await trilha.abrir();

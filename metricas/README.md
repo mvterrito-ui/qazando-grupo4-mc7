@@ -42,10 +42,19 @@ Preencha a cada atualização. Copie a última linha e ajuste.
 | 26/08/2026 | 0 | 0 | 0% | 3 | 0 | 0 | — |
 | 07/09/2026 | 58 | 45 | 78% | 5 | 0 | 0 | — |
 | 16/11/2026 | 92 | 57 | 62% | 7 | 0 | 0 | 2 de 5 |
+| 25/11/2026 | 125 | 88 | 70% | 12 | 0 | 0 | 2 de 5 |
 
 *(Os 3 bugs iniciais são os que estão em [`../bugs/`](../bugs/), encontrados na exploração
 inicial do produto.)*
 
+
+### Nota sobre a linha de 25/11/2026 — Parte 3 concluída
+
+Depois da entrega, a Parte 3 foi retomada (ver [redistribuição](../docs/06-sorteio-das-partes.md)).
+Entraram **33 cenários**, dos quais **31 automatizados** e 2 manuais, medidos rodando contra o
+site em 25/11/2026. Entraram também **5 bugs**, do 008 ao 012, ainda sem cartão no Jira.
+
+A pipeline continua em 2 de 5 porque nada foi enviado ao GitHub depois de 16/11.
 
 ### Nota sobre a linha de 16/11/2026 — fechamento da entrega
 

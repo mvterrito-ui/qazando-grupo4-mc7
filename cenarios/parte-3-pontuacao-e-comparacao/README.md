@@ -1,9 +1,36 @@
 # Parte 3 — Pontuação e Comparação
 
-**Responsável:** Denaide de Cassia Sónora Souza Costa  
-*(definido por sorteio — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
+**Responsável:** Marcos Vinicio Territo  
+*(desde 25/11/2026 — ver [docs/06-sorteio-das-partes.md](../../docs/06-sorteio-das-partes.md))*
 
 **Telas:** `/quiz` · `/progress` (Meu Progresso) · `/ranking`
+
+---
+
+## ✅ Os cenários estão escritos em Gherkin
+
+As 23 sementes abaixo viraram **33 cenários** em quatro arquivos `.feature`, e a automação
+**roda contra o site** (execução de 25/11/2026):
+
+| Arquivo | Cenários | Automatizados | Manuais |
+|---|---|---|---|
+| [`quiz.feature`](quiz.feature) | 11 | 10 | 1 |
+| [`meu-progresso.feature`](meu-progresso.feature) | 9 | 9 | 0 |
+| [`ranking.feature`](ranking.feature) | 10 | 9 | 1 |
+| [`coerencia.feature`](coerencia.feature) | 3 | 3 | 0 |
+| **Total** | **33** | **31** | **2** |
+
+A automação está em
+[`automacao/tests/parte-3-pontuacao-e-comparacao/`](../../automacao/tests/parte-3-pontuacao-e-comparacao/).
+
+**Achados:** 5 bugs novos, do [008](../../bugs/008-duplo-clique-no-quiz-registra-resposta-duas-vezes.md)
+ao [012](../../bugs/012-ranking-nao-exibe-email.md), e o [003](../../bugs/003-titulo-progresso-texto-residual.md)
+confirmado. O mais importante é o 008, achado exatamente como esta parte previa: comparando
+as três telas. O quiz fechou com 30 respostas e 8 acertos; o Meu Progresso mostrava 50 e 15.
+
+**As sementes de ranking com 4 e 5 exercícios e com duas contas** viraram regras conferidas em
+**todas** as linhas do ranking real, que tem mais de 150 alunos. É uma cobertura maior do que a
+das sementes, e não precisa de massa preparada.
 
 ---
 
@@ -45,37 +72,37 @@ dos seus cenários.
 ## Cenários-semente
 
 ### Quiz
-- [ ] Responder uma pergunta corretamente e ver o contador de acertos subir *(caminho feliz)*
-- [ ] Responder uma pergunta erradamente e ver o contador de erros subir
-- [ ] Conferir que cada pergunta tem exatamente 3 opções *(regra 2)*
-- [ ] Conferir que só uma opção é aceita como correta *(regra 2)*
-- [ ] Conferir se o XP sobe a cada acerto *(regra 3)*
-- [ ] Conferir se o XP **não** sobe quando erra
-- [ ] Percorrer o quiz até a pergunta 30 e ver o que acontece no fim *(regra 1)*
-- [ ] Reiniciar o quiz e conferir se os contadores voltam a zero *(regra 4)*
-- [ ] Depois de reiniciar, conferir se o histórico anterior some ou acumula
+- [x] Responder uma pergunta corretamente e ver o contador de acertos subir *(caminho feliz)*
+- [x] Responder uma pergunta erradamente e ver o contador de erros subir
+- [x] Conferir que cada pergunta tem exatamente 3 opções *(regra 2)*
+- [x] Conferir que só uma opção é aceita como correta *(regra 2)*
+- [x] Conferir se o XP sobe a cada acerto *(regra 3)*
+- [x] Conferir se o XP **não** sobe quando erra
+- [x] Percorrer o quiz até a pergunta 30 e ver o que acontece no fim *(regra 1)*
+- [x] Reiniciar o quiz e conferir se os contadores voltam a zero *(regra 4)*
+- [x] Depois de reiniciar, conferir se o histórico anterior some ou acumula
 
 ### Meu Progresso
-- [ ] Numa conta nova, conferir se todos os números começam em 0
-- [ ] Responder 5 perguntas do quiz — 3 certas e 2 erradas — e conferir os três números:
+- [x] Numa conta nova, conferir se todos os números começam em 0
+- [x] Responder 5 perguntas do quiz — 3 certas e 2 erradas — e conferir os três números:
       respondidas = 5, corretas = 3, erradas = 2 *(regra 6)*
-- [ ] Conferir se a taxa de acerto bate com a conta: 3 ÷ 5 = 60% *(regra 7)*
-- [ ] Fazer o mesmo pelos Exercícios e conferir o bloco de frases *(regra 5)*
-- [ ] **Conferir que o quiz não contamina o bloco de frases, e vice-versa** *(regra 7)*
-- [ ] Responder mais uma pergunta e conferir se o número muda sem precisar recarregar a
+- [x] Conferir se a taxa de acerto bate com a conta: 3 ÷ 5 = 60% *(regra 7)*
+- [x] Fazer o mesmo pelos Exercícios e conferir o bloco de frases *(regra 5)*
+- [x] **Conferir que o quiz não contamina o bloco de frases, e vice-versa** *(regra 7)*
+- [x] Responder mais uma pergunta e conferir se o número muda sem precisar recarregar a
       página *(regra 8)*
-- [ ] Conferir a taxa de acerto quando ainda não há nenhuma resposta — deve mostrar 0%, não erro
+- [x] Conferir a taxa de acerto quando ainda não há nenhuma resposta — deve mostrar 0%, não erro
 
 ### Ranking
-- [ ] Com 4 exercícios respondidos, confirmar que **não** apareço no ranking *(regra 9)*
-- [ ] Responder o 5º e confirmar que passo a aparecer *(regra 9)*
-- [ ] Conferir se o total exibido é a soma de Quiz + Exercícios *(regra 10)*
-- [ ] Com duas contas de pontuações diferentes, conferir se quem tem mais acertos aparece
+- [x] Com 4 exercícios respondidos, confirmar que **não** apareço no ranking *(regra 9)*
+- [x] Responder o 5º e confirmar que passo a aparecer *(regra 9)*
+- [x] Conferir se o total exibido é a soma de Quiz + Exercícios *(regra 10)*
+- [x] Com duas contas de pontuações diferentes, conferir se quem tem mais acertos aparece
       acima *(regra 11)*
-- [ ] Conferir se o nome exibido é o nome certo da conta *(regra 12)*
-- [ ] Conferir se o e-mail exibido é o certo — **e levantar a pergunta se ele deveria mesmo
+- [x] Conferir se o nome exibido é o nome certo da conta *(regra 12)*
+- [x] Conferir se o e-mail exibido é o certo — **e levantar a pergunta se ele deveria mesmo
       estar visível para todos** *(regra 12)*
-- [ ] Conferir os cartões do topo: Total de Competidores, Líder Atual, Maior Precisão
+- [x] Conferir os cartões do topo: Total de Competidores, Líder Atual, Maior Precisão
 
 ---
 

@@ -32,9 +32,32 @@ Depois:
 ```bash
 npm test                # roda tudo
 npm run test:ui         # modo visual — comece por aqui
-npm run test:parte-2    # só a Parte 2
-npm run test:parte-4    # só a Parte 4
 npm run report          # abre o relatório da última execução
+```
+
+### Atalhos
+
+Todos rodam com `npm run <atalho>`. O login do `setup` roda antes, sozinho, em todos eles.
+
+| Atalho | O que roda |
+|---|---|
+| `test:parte-2` | a Parte 2 inteira |
+| `test:parte-4` | a Parte 4 inteira |
+| `test:trilha` · `test:exercicios` · `test:flashcards` | uma tela da Parte 2 |
+| `test:historinhas` · `test:entrevistas` · `test:chatbot` · `test:palavras` · `test:pronuncia` | uma tela da Parte 4 |
+| `test:microfone` | só os testes de microfone, concedido e negado |
+| `test:login` | só o login — para descobrir se o problema é a conta |
+| `test:falhos` | só o que falhou na última execução |
+| `test:headed` | tudo, com o navegador aberto na tela |
+| `test:debug` | passo a passo, com o inspetor do Playwright |
+| `codegen` | abre o site gravando cliques e sugerindo seletores |
+
+Para passar opções a um atalho, use `--` antes delas. Exemplos:
+
+```bash
+npm run test:palavras -- --headed      # uma tela, vendo o navegador
+npm run test:parte-4 -- --list         # só lista os testes, sem rodar
+npm run test:chatbot -- -g "vazia"     # só os testes com "vazia" no nome
 ```
 
 **Na primeira vez, use `npm run test:ui`.** Ele abre uma janela onde você vê o teste rodando
@@ -55,9 +78,9 @@ automacao/
   support/
     ia.js                ajudantes para testar conteúdo gerado por IA
   tests/
-    parte-1-acesso-e-permissao/     (vazia — Flavia, fica para depois da entrega)
+    parte-1-acesso-e-permissao/     (João Paulo — em andamento)
     parte-2-pratica-estruturada/    João Paulo — trilha, exercícios e flashcards
-    parte-3-pontuacao-e-comparacao/ (vazia — Denaide, fica para depois da entrega)
+    parte-3-pontuacao-e-comparacao/ Marcos — quiz, progresso, ranking e coerência
     parte-4-conteudo-com-ia/        Marcos — o exemplo
 ```
 
@@ -237,5 +260,5 @@ O que a sua parte tem de diferente:
 | `Faltam QA_EMAIL e QA_PASSWORD` | o `.env` não existe ou está vazio — `cp .env.example .env` |
 | `Não consegui ativar o premium` | código mudou; confira em `/activate-premium`. Se recusou código válido, **é bug** |
 | Teste não acha um elemento | seletor desatualizado — conserte o `pages/parte-N-.../*.page.js`, não o spec |
-| Tudo falha logo no começo | rode `npx playwright test --project=setup` sozinho e veja onde o login para |
+| Tudo falha logo no começo | rode `npm run test:login` sozinho e veja onde o login para |
 | Muito lento | é a IA respondendo. Normal levar de 2 a 30 segundos por geração |

@@ -12,10 +12,16 @@ mesmo tempo.
 
 | Parte | Responsável |
 |---|---|
-| **Parte 1 — Acesso e Permissão** | Flavia |
+| **Parte 1 — Acesso e Permissão** | João Paulo |
 | **Parte 2 — Prática Estruturada** | João Paulo |
-| **Parte 3 — Pontuação e Comparação** | Denaide de Cassia Sónora Souza Costa |
+| **Parte 3 — Pontuação e Comparação** | Marcos Vinicio Territo |
 | **Parte 4 — Conteúdo com IA** | Marcos Vinicio Territo |
+
+### Redistribuição registrada — 25/11/2026
+
+Depois da entrega de 24/11, Flavia e Denaide saíram do grupo, e as partes 1 e 3 estavam em
+aberto. Para concluir o projeto, os dois integrantes que seguem assumiram uma parte cada:
+**João Paulo fica com a Parte 1** e **Marcos com a Parte 3**.
 
 ### Troca registrada — 26/08/2026
 
